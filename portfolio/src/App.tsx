@@ -12,7 +12,9 @@ import {
 
 import crazyFrog from "./assets/crazyFrog.png";
 
-import Edcucation from "./components/Education";
+import Education from "./sections/Education";
+import { FooterSocial } from "./components/FooterSocial";
+import Experience from "./sections/Experience";
 
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
@@ -25,23 +27,28 @@ function App() {
       <Group
         align="flex-start"
         justify="space-between"
-        gap="xl"
+        gap="50px"
+        wrap="nowrap"
         style={{ "--pad": "35px", width: "100%", padding: "var(--pad)" }}
       >
         <TableOfContents
           depthOffset={30}
-          style={{ width: "250", position: "sticky", top: "var(--pad)" }}
+          style={{ position: "sticky", top: "var(--pad)" }}
+          getControlProps={({ data }) => ({
+            onClick: () => data.getNode().scrollIntoView(),
+            children: data.value,
+          })}
         ></TableOfContents>
-        <Stack align="center" justify="center" gap="md">
-          <Group align="center" justify="space-between" gap="xl">
-            <Title order={1} size={60}>
-              Welcome!
-            </Title>
+        <Stack align="left" justify="center" gap="md">
+          <Group align="center" gap="xl">
+            <Title>Welcome!</Title>
             <Image radius="md" src={crazyFrog} h={75} w="auto"></Image>
           </Group>
-          <Edcucation />
+          <Education />
+          <Experience />
         </Stack>
       </Group>
+      <FooterSocial />
     </MantineProvider>
   );
 }

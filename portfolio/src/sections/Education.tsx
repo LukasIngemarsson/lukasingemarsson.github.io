@@ -62,14 +62,16 @@ const semesterData = [
     { code: "TGTU99", name: "Ethical Issues in AI" },
     { code: "TDDD89", name: "Scientific Method" },
   ],
-  [{ code: "TQXX33", name: "Degree project - Master’s Thesis" }],
+  [{ code: "TQXX33", name: "Degree project - Master's Thesis" }],
 ];
 
 function Education() {
   const semesterItems = semesterData.map((semester, index) => (
     <Accordion.Item key={index} value={String(index)}>
       <Accordion.Control>
-        {`Semester ${index + 1}${index + 1 == 7 ? ": Exchange @ KAIST" : ""}`}
+        {`Semester ${index + 1}${
+          index + 1 == 7 ? ": Exchange @ KAIST, South Korea" : ""
+        }`}
       </Accordion.Control>
       <Accordion.Panel>
         <Table>
@@ -91,7 +93,7 @@ function Education() {
       <Title order={1}>Education</Title>
       <Title order={2}>M.Sc. in Engineering - Information Technology</Title>
       <Text>
-        {"Linköping University (2021 – 2026)."}{" "}
+        {"Linköping University (2021 – 2026) "}
         <Text fs="italic" c="dimmed" span>
           Specialization: AI and Machine Learning
         </Text>
