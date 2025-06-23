@@ -1,6 +1,21 @@
-import { Accordion, Table, Title, Text, Stack } from "@mantine/core";
+import {
+  Accordion,
+  Table,
+  Title,
+  Text,
+  Stack,
+  Button,
+  Group,
+} from "@mantine/core";
+import { useState } from "react";
 
-const semesterData = [
+const mscSemesterTitles: { [key: number]: string } = {
+  6: "B.Sc. Thesis",
+  7: "Exchange @ KAIST, South Korea",
+  10: "M.Sc. Thesis",
+};
+
+const mscSemesterData = [
   [
     { code: "TDDC75", name: "Discrete Structures" },
     { code: "TDDC77", name: "Object Oriented Programming" },
@@ -66,19 +81,34 @@ const semesterData = [
 ];
 
 function Education() {
-  const semesterItems = semesterData.map((semester, index) => (
+  const [degreeAccordionValue, setDegreeAccordionValue] = useState<
+    string | null
+  >(null);
+  const [mscOpenedItems, setMscOpenedItems] = useState<string[]>([]);
+
+  const allMscItemValues = mscSemesterData.map((_, index) => String(index));
+  const allMscItemsOpened = mscOpenedItems.length === allMscItemValues.length;
+
+  const mscSemesterItems = mscSemesterData.map((semester, index) => (
     <Accordion.Item key={index} value={String(index)}>
+      {/* index + 1 is equal to semester number */}
       <Accordion.Control>
-        {`Semester ${index + 1}${
-          index + 1 == 7 ? ": Exchange @ KAIST, South Korea" : ""
-        }`}
+        {`Semester ${index + 1}`}
+        {mscSemesterTitles[index + 1] && (
+          <Text span>
+            {": "}
+            <Text c="dimmed" span>
+              {mscSemesterTitles[index + 1]}
+            </Text>
+          </Text>
+        )}
       </Accordion.Control>
       <Accordion.Panel>
         <Table>
           <Table.Tbody>
             {semester.map((course) => (
               <Table.Tr key={course.code}>
-                <Table.Td>{course.code}</Table.Td>
+                <Table.Td style={{ width: 100 }}>{course.code}</Table.Td>
                 <Table.Td>{course.name}</Table.Td>
               </Table.Tr>
             ))}
@@ -91,14 +121,56 @@ function Education() {
   return (
     <Stack>
       <Title order={1}>Education</Title>
-      <Title order={2}>M.Sc. in Engineering - Information Technology</Title>
-      <Text>
-        {"Linköping University (2021 – 2026) "}
-        <Text fs="italic" c="dimmed" span>
-          Specialization: AI and Machine Learning
-        </Text>
-      </Text>
-      <Accordion variant="contained">{semesterItems}</Accordion>
+      <Accordion
+        variant="contained"
+        value={degreeAccordionValue}
+        onChange={setDegreeAccordionValue}
+      >
+        <Accordion.Item value="msc">
+          <Accordion.Control>
+            <Group justify="space-between" pr="lg">
+              <Stack gap="xs">
+                <Stack gap={0}>
+                  <Title order={3}>Linköping University</Title>
+                  <Text size="lg">
+                    Master of Science in Engineering – MSE (Swedish:
+                    Civilingenjör), Information Technology
+                  </Text>
+                  <Text fs="italic" c="dimmed" size="lg">
+                    Aug 2021 – Jun 2026
+                  </Text>
+                </Stack>
+                <Text>
+                  GPA: 5.0 / 5.0 <br />
+                  Specialization: AI and Machine Learning
+                </Text>
+              </Stack>
+              {degreeAccordionValue === "msc" && (
+                <Button
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setMscOpenedItems(
+                      allMscItemsOpened ? [] : allMscItemValues
+                    );
+                  }}
+                >
+                  {allMscItemsOpened ? "Collapse All" : "Expand All"}
+                </Button>
+              )}
+            </Group>
+          </Accordion.Control>
+          <Accordion.Panel>
+            <Accordion
+              variant="contained"
+              multiple
+              value={mscOpenedItems}
+              onChange={setMscOpenedItems}
+            >
+              {mscSemesterItems}
+            </Accordion>
+          </Accordion.Panel>
+        </Accordion.Item>
+      </Accordion>
     </Stack>
   );
 }

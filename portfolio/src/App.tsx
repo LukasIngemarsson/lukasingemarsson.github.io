@@ -8,12 +8,14 @@ import {
   TableOfContents,
   Title,
   Image,
+  Text,
 } from "@mantine/core";
 
-import crazyFrog from "./assets/crazyFrog.png";
+import portrait from "./assets/portrait.jpeg";
+
+import { FooterSocial } from "./components/mantine-ui/FooterSocial";
 
 import Education from "./sections/Education";
-import { FooterSocial } from "./components/FooterSocial";
 import Experience from "./sections/Experience";
 
 const theme = createTheme({
@@ -29,20 +31,26 @@ function App() {
         justify="space-between"
         gap="50px"
         wrap="nowrap"
-        style={{ "--pad": "35px", width: "100%", padding: "var(--pad)" }}
+        style={{ "--pad": "40px", width: "100%", padding: "var(--pad)" }}
       >
         <TableOfContents
-          depthOffset={30}
-          style={{ position: "sticky", top: "var(--pad)" }}
+          style={{ width: 300, position: "sticky", top: "var(--pad)" }}
+          depthOffset={15}
           getControlProps={({ data }) => ({
             onClick: () => data.getNode().scrollIntoView(),
             children: data.value,
           })}
         ></TableOfContents>
-        <Stack align="left" justify="center" gap="md">
+        <Stack align="left" justify="center" gap="xl">
           <Group align="center" gap="xl">
-            <Title>Welcome!</Title>
-            <Image radius="md" src={crazyFrog} h={75} w="auto"></Image>
+            <Image radius="50%" src={portrait} h={150} w="auto"></Image>
+            <Stack gap={3}>
+              <Title>Hello & Welcome to My Portfolio!</Title>
+              <Text size="xl">Lukas Ingemarsson</Text>
+              <Text>
+                Final-Year M.Sc. Student in AI & ML @ Linköping University
+              </Text>
+            </Stack>
           </Group>
           <Education />
           <Experience />

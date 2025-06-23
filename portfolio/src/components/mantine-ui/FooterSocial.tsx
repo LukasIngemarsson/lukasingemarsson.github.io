@@ -6,7 +6,7 @@ export function FooterSocial() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Text>{"This is the end of the page. :)"}</Text>
+        <Text>Lukas Ingemarsson</Text>
         <Group
           gap={0}
           className={classes.links}
