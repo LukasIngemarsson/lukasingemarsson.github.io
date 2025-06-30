@@ -6,6 +6,7 @@ import {
   Stack,
   Button,
   Group,
+  Paper,
 } from "@mantine/core";
 import { useState } from "react";
 
@@ -68,7 +69,7 @@ const mscSemesterData = [
     { code: "TDDD27", name: "Advanced Web Programming" },
   ],
   [
-    { code: "TDDC17", name: "Artifical Intelligence" },
+    { code: "TDDC17", name: "Artificial Intelligence" },
     { code: "TANA21", name: "Scientific Computing" },
     {
       code: "TDDE19",
@@ -85,6 +86,7 @@ function Education() {
     string | null
   >(null);
   const [mscOpenedItems, setMscOpenedItems] = useState<string[]>([]);
+  const [showGpa, setShowGpa] = useState(false);
 
   const allMscItemValues = mscSemesterData.map((_, index) => String(index));
   const allMscItemsOpened = mscOpenedItems.length === allMscItemValues.length;
@@ -140,10 +142,26 @@ function Education() {
                     Aug 2021 – Jun 2026
                   </Text>
                 </Stack>
-                <Text>
-                  GPA: 5.0 / 5.0 <br />
-                  Specialization: AI and Machine Learning
-                </Text>
+                <Text>Specialization: AI and Machine Learning</Text>
+                {degreeAccordionValue === "msc" && (
+                  <Paper
+                    withBorder
+                    shadow="xs"
+                    p="xs"
+                    style={{
+                      cursor: "default",
+                      display: "inline-block",
+                      maxWidth: 90,
+                      width: "auto",
+                      textAlign: "center",
+                    }}
+                    onClick={(event) => event.stopPropagation()}
+                    onMouseEnter={() => setShowGpa(true)}
+                    onMouseLeave={() => setShowGpa(false)}
+                  >
+                    {showGpa ? "5.0 / 5.0" : "GPA"}
+                  </Paper>
+                )}
               </Stack>
               {degreeAccordionValue === "msc" && (
                 <Button
@@ -160,15 +178,38 @@ function Education() {
             </Group>
           </Accordion.Control>
           <Accordion.Panel>
-            <Accordion
-              variant="contained"
-              multiple
-              value={mscOpenedItems}
-              onChange={setMscOpenedItems}
-            >
-              {mscSemesterItems}
-            </Accordion>
+            {/* wrap with paper to inherit bg color */}
+            <Paper>
+              <Accordion
+                variant="contained"
+                multiple
+                value={mscOpenedItems}
+                onChange={setMscOpenedItems}
+              >
+                {mscSemesterItems}
+              </Accordion>
+            </Paper>
           </Accordion.Panel>
+        </Accordion.Item>
+        <Accordion.Item value="exchange">
+          <Accordion.Control>
+            <Group justify="space-between" pr="lg">
+              <Stack gap="xs">
+                <Stack gap={0}>
+                  <Title order={3}>
+                    Korea Advanced Institute of Science and Technology (KAIST)
+                  </Title>
+                  <Text size="lg">
+                    Exchange Semester, AI and Machine Learning
+                  </Text>
+                  <Text fs="italic" c="dimmed" size="lg">
+                    Aug 2024 – Jan 2025
+                  </Text>
+                </Stack>
+              </Stack>
+            </Group>
+          </Accordion.Control>
+          <Accordion.Panel>Fix later</Accordion.Panel>
         </Accordion.Item>
       </Accordion>
     </Stack>

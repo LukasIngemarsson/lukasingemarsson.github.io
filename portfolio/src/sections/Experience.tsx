@@ -15,6 +15,56 @@ function Experience() {
           title={
             <Stack gap={0}>
               <Title order={3}>
+                Autonomous Systems Intern{" "}
+                <Text c="dimmed" span inherit>
+                  @ Scania/TRATON
+                </Text>
+              </Title>
+              <Text fs="italic" c="dimmed" size="lg">
+                Summers 2023/24/25
+              </Text>
+            </Stack>
+          }
+        >
+          <Stack>
+            <Text>
+              Summer '25: Developing an automatic scenario extraction tool,
+              using sparse image-text data to generate complete scenario code.
+            </Text>
+            <Text>
+              Summer '24: Worked with ML-based lane detection solutions for
+              offline perception in autonomous vehicles.
+            </Text>
+            <Text>
+              Summer '23: Completed a 3-stage project surrounding the V&V,
+              segmentation, and application of in-house autonomous vehicle data.
+            </Text>
+          </Stack>
+        </Timeline.Item>
+        <Timeline.Item
+          title={
+            <Stack gap={0}>
+              <Title order={3}>
+                Teaching Assistant{" "}
+                <Text c="dimmed" span inherit>
+                  @ Linköping University
+                </Text>
+              </Title>
+              <Text fs="italic" c="dimmed" size="lg">
+                Jan 2023 – May 2023
+              </Text>
+            </Stack>
+          }
+        >
+          <Text>
+            Was responsible for a group of first-year IT students, offering
+            guidance in questions regarding all of their ongoing courses.
+          </Text>
+        </Timeline.Item>
+        <Timeline.Item
+          title={
+            <Stack gap={0}>
+              <Title order={3}>
                 Professional Esports Player{" "}
                 <Text c="dimmed" span inherit>
                   @ Arctic Gaming
@@ -68,61 +118,12 @@ function Experience() {
             <Stack gap="xs">
               <Title order={4}>Live Streaming</Title>
               <Text>
-                Broadcasted esports gameplay with live commentary on the Twitch
-                platform, not only remotely, but also from the Red Bull office
-                in Stockholm with their equipment.
+                During my time as an avid Clash Royale player, I was engaged in
+                live streaming on Twitch. Following the Red Bull events, I
+                occasionally visited the Red Bull office in Stockholm to host
+                live streams with their equipment.
               </Text>
             </Stack>
-          </Stack>
-        </Timeline.Item>
-        <Timeline.Item
-          title={
-            <Stack gap={0}>
-              <Title order={3}>
-                Teaching Assistant{" "}
-                <Text c="dimmed" span inherit>
-                  @ Linköping University
-                </Text>
-              </Title>
-              <Text fs="italic" c="dimmed" size="lg">
-                Jan 2023 – May 2023
-              </Text>
-            </Stack>
-          }
-        >
-          <Text>
-            Was responsible for a group of first-year IT students, offering
-            guidance in questions regarding all of their ongoing courses.
-          </Text>
-        </Timeline.Item>
-        <Timeline.Item
-          title={
-            <Stack gap={0}>
-              <Title order={3}>
-                Autonomous Systems Intern{" "}
-                <Text c="dimmed" span inherit>
-                  @ Scania/TRATON
-                </Text>
-              </Title>
-              <Text fs="italic" c="dimmed" size="lg">
-                Summers 2023/24/25
-              </Text>
-            </Stack>
-          }
-        >
-          <Stack>
-            <Text>
-              '23: Completed a 3-stage project surrounding the V&V,
-              segmentation, and application of autonomous vehicle data.
-            </Text>
-            <Text>
-              '24: Worked with ML-based lane detection solutions for offline
-              perception in autonomous vehicles.
-            </Text>
-            <Text>
-              '25: Developing an automatic scenario extraction tool, using
-              sparse image-text data to generate complete scenario code.
-            </Text>
           </Stack>
         </Timeline.Item>
       </Timeline>
