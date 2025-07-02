@@ -3,7 +3,7 @@ import { IconChevronRight } from "@tabler/icons-react";
 
 function Experience() {
   return (
-    <Stack>
+    <Stack w="85%">
       <Stack gap={0}>
         <Text size="s" c="dimmed">
           (Notable)

@@ -110,7 +110,7 @@ function Education() {
           <Table.Tbody>
             {semester.map((course) => (
               <Table.Tr key={course.code}>
-                <Table.Td style={{ width: 100 }}>{course.code}</Table.Td>
+                <Table.Td w={100}>{course.code}</Table.Td>
                 <Table.Td>{course.name}</Table.Td>
               </Table.Tr>
             ))}
@@ -148,11 +148,11 @@ function Education() {
                     withBorder
                     shadow="xs"
                     p="xs"
+                    display="inline-block"
+                    w="auto"
                     style={{
                       cursor: "default",
-                      display: "inline-block",
                       maxWidth: 90,
-                      width: "auto",
                       textAlign: "center",
                     }}
                     onClick={(event) => event.stopPropagation()}

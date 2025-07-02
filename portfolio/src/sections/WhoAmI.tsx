@@ -33,7 +33,7 @@ function WhoAmI() {
         </List.Item>
         <List.Item>
           Greatly enjoy learning new things, challenging myself, and working
-          with others.
+          with others to achieve set goals.
         </List.Item>
       </List>
     </Stack>
