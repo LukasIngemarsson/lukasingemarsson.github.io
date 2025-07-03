@@ -18,7 +18,7 @@ function Banner() {
   return (
     <BackgroundImage src={banner} radius="md" pos="relative" p="lg">
       <Group
-        gap={0}
+        gap={10}
         justify="flex-end"
         wrap="nowrap"
         pos="absolute"
@@ -26,8 +26,8 @@ function Banner() {
         right={0}
         m={12}
       >
-        <LinkedInIcon iconProps={{ size: 30 }}></LinkedInIcon>
-        <GitHubIcon iconProps={{ size: 30 }}></GitHubIcon>
+        <LinkedInIcon size="md" iconProps={{ size: 25 }}></LinkedInIcon>
+        <GitHubIcon size="md" iconProps={{ size: 25 }}></GitHubIcon>
       </Group>
       <Group align="center" gap="xl" p="md">
         <Image radius="50%" src={portrait} h={150} w="auto"></Image>

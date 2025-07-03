@@ -1,21 +1,27 @@
 import { Anchor, Paper, Stack, type PaperProps } from "@mantine/core";
+import { SECTIONS_DATA } from "../data/sections.data";
 
-const items = [
-  { section: "Who Am I?", href: "#whoami" },
-  { section: "Education", href: "#education" },
-  { section: "Experience", href: "#experience" },
-  { section: "Projects", href: "#projects" },
-];
+type Props = PaperProps & { activeSection: string };
 
-function Navbar(props: PaperProps) {
+function Navbar({ activeSection, ...paperProps }: Props) {
   return (
-    <Paper shadow="md" p="md" radius="md" bg="dark" {...props}>
+    <Paper shadow="md" p="md" radius="md" bg="dark" {...paperProps}>
       <Stack gap="xs">
-        {items.map((item) => (
-          <Anchor key={item.href} href={item.href} size="md" c="inherit">
-            {item.section}
-          </Anchor>
-        ))}
+        {SECTIONS_DATA.map(({ id, title }) => {
+          const isActive = activeSection === id;
+          return (
+            <Anchor
+              key={id}
+              href={"#" + id}
+              size="md"
+              c="inherit"
+              td={isActive ? "underline" : ""}
+              fw={isActive ? 700 : 400}
+            >
+              {title}
+            </Anchor>
+          );
+        })}
       </Stack>
     </Paper>
   );

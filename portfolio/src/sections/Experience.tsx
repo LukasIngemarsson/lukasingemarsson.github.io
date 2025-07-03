@@ -1,9 +1,10 @@
 import { Stack, Timeline, Title, Text, Anchor, List } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
+import ExperienceTimelineItem from "../components/ExperienceTimelineItem";
 
 function Experience() {
   return (
-    <Stack w="85%">
+    <Stack w="90%">
       <Stack gap={0}>
         <Text size="s" c="dimmed">
           (Notable)
@@ -11,20 +12,10 @@ function Experience() {
         <Title order={1}>Experience</Title>
       </Stack>
       <Timeline bulletSize={20}>
-        <Timeline.Item
-          title={
-            <Stack gap={0}>
-              <Title order={3}>
-                Autonomous Systems Intern{" "}
-                <Text c="dimmed" span inherit>
-                  @ Scania/TRATON
-                </Text>
-              </Title>
-              <Text fs="italic" c="dimmed" size="lg">
-                Summers 2023/24/25
-              </Text>
-            </Stack>
-          }
+        <ExperienceTimelineItem
+          role="Autonomous Systems Intern"
+          organisation="Scania/TRATON"
+          date="Summers 2023/24/25"
         >
           <Stack>
             <Text>
@@ -40,41 +31,21 @@ function Experience() {
               segmentation, and application of in-house autonomous vehicle data.
             </Text>
           </Stack>
-        </Timeline.Item>
-        <Timeline.Item
-          title={
-            <Stack gap={0}>
-              <Title order={3}>
-                Teaching Assistant{" "}
-                <Text c="dimmed" span inherit>
-                  @ Linköping University
-                </Text>
-              </Title>
-              <Text fs="italic" c="dimmed" size="lg">
-                Jan 2023 – May 2023
-              </Text>
-            </Stack>
-          }
+        </ExperienceTimelineItem>
+        <ExperienceTimelineItem
+          role="Teaching Assistant"
+          organisation="Linköping University"
+          date="Jan 2023 – May 2023"
         >
           <Text>
             Was responsible for a group of first-year IT students, offering
             guidance in questions regarding all of their ongoing courses.
           </Text>
-        </Timeline.Item>
-        <Timeline.Item
-          title={
-            <Stack gap={0}>
-              <Title order={3}>
-                Professional Esports Player{" "}
-                <Text c="dimmed" span inherit>
-                  @ Arctic Gaming
-                </Text>
-              </Title>
-              <Text fs="italic" c="dimmed" size="lg">
-                Nov 2018 – Aug 2019
-              </Text>
-            </Stack>
-          }
+        </ExperienceTimelineItem>
+        <ExperienceTimelineItem
+          role="Professional Esports Player"
+          organisation="Arctic Gaming"
+          date="Nov 2018 – Aug 2019"
         >
           <Stack gap="lg">
             <Text>
@@ -125,7 +96,7 @@ function Experience() {
               </Text>
             </Stack>
           </Stack>
-        </Timeline.Item>
+        </ExperienceTimelineItem>
       </Timeline>
     </Stack>
   );
