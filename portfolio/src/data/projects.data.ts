@@ -10,15 +10,21 @@ export const SLIDE_DATA = [
     title: "Algorithmic Problem Solving",
     description:
       "I have recreationally solved algorithmic coding problems, mainly on Kattis and \
-      UVa Online Judge. My solutions to these problems are recorded, and the algorithms \
-      that I have implemented are consolidated in a library.",
+      UVa Online Judge, and also made a library with the algorithms that I have implemented.",
     repoNames: ["kattis", "uva-online-judge", "algo-lib"],
+  },
+  {
+    title: "CLIP PubMedVision",
+    description:
+      "A project where the objective was to investigate the potential of (medical) image-text \
+      data when fine-tuning CLIP for image classification, in absence of labeled data.",
+    repoNames: ["clip-pubmedvision"],
   },
   {
     title: "Musicle",
     description:
-      "A social music app notably featuring a multi-player music quiz that takes each \
-      participants' Spotify listening habits into account, and a queue session with a \
+      "A social music app notably featuring a multiplayer music quiz that takes each \
+      participant's Spotify listening habits into account, and a multiplayer queue session with a \
       fair voting system.",
     repoNames: ["musicle"],
   },

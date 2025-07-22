@@ -33,7 +33,7 @@ function Banner() {
         <Image radius="50%" src={portrait} h={150} w="auto"></Image>
         <Paper radius="md" p="md">
           <Stack gap={3}>
-            <Title size="3.5rem">Hello, I'm Lukas!</Title>
+            <Title size="3.5rem">Hello, I'm Lukas</Title>
             <Text size="xl">
               Final-Year M.Sc. Student in AI & ML @ Linköping University
             </Text>

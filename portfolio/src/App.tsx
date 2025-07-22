@@ -48,7 +48,7 @@ function App() {
   return (
     <>
       <style>{"html { scroll-behavior: smooth; }"}</style>
-      <MantineProvider defaultColorScheme="dark" theme={theme}>
+      <MantineProvider defaultColorScheme="auto" theme={theme}>
         <Navbar
           activeSection={activeSection}
           pos="fixed"

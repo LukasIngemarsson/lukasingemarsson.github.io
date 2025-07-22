@@ -20,7 +20,7 @@ function WhoAmI() {
       <Title order={1}>Who Am I?</Title>
       <List icon={<IconChevronRight size={12} />} size="xl">
         <List.Item>
-          A {calculateMyAge()}-year old student (class of 2026) based in
+          {calculateMyAge()}-year-old student (class of 2026) currently based in
           Linköping and Stockholm, Sweden.
         </List.Item>
         <List.Item>

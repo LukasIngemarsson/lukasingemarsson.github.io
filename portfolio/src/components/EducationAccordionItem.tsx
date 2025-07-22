@@ -34,7 +34,7 @@ function EducationAccordionItem({
           </Stack>
         </Group>
       </Accordion.Control>
-      {children}
+      <Accordion.Panel>{children}</Accordion.Panel>
     </Accordion.Item>
   );
 }

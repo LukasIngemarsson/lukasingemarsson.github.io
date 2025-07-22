@@ -2,15 +2,23 @@ import { Timeline, Stack, Title, Text } from "@mantine/core";
 import type { ReactNode } from "react";
 
 type Props = {
+  key: number;
   role: string;
   organisation: string;
   date: string;
   children: ReactNode;
 };
 
-function ExperienceTimelineItem({ role, organisation, date, children }: Props) {
+function ExperienceTimelineItem({
+  key,
+  role,
+  organisation,
+  date,
+  children,
+}: Props) {
   return (
     <Timeline.Item
+      key={key}
       title={
         <Stack gap={0}>
           <Title order={3}>
