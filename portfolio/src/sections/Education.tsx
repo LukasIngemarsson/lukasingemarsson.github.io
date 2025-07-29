@@ -12,7 +12,6 @@ import {
 import EducationAccordionItem from "../components/EducationAccordionItem";
 
 import { useRef, useState } from "react";
-import React from "react";
 
 import { MSC_SEMESTER_TITLES, MSC_SEMESTER_DATA } from "../data/education.data";
 
@@ -22,12 +21,25 @@ function Education() {
   const [openedParentAccordion, setOpenedParentAccordion] = useState<
     string | null
   >(null);
+  const exchangeRef = useRef<HTMLDivElement>(null);
   const exchangeCoursesRef = useRef<HTMLDivElement>(null);
 
   const allMscItemValues = MSC_SEMESTER_DATA.map((_, index) =>
     String(index + 1)
   );
   const allMscItemsOpened = mscOpenedItems.length === allMscItemValues.length;
+
+  const handleExchangeClick = () => {
+    if (openedParentAccordion !== "msc") return;
+    setMscOpenedItems([]);
+    setOpenedParentAccordion("exchange");
+    setTimeout(() => {
+      exchangeRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }, 300);
+  };
 
   const redirectToExchangeCourses = () => {
     setMscOpenedItems(["7"]);
@@ -37,13 +49,17 @@ function Education() {
         behavior: "smooth",
         block: "center",
       });
-    }, 250);
+    }, 300);
   };
 
   const mscSemesterItems = MSC_SEMESTER_DATA.map((semester, index) => {
     const semesterNum = index + 1;
     const item = (
-      <Accordion.Item key={semesterNum} value={String(semesterNum)}>
+      <Accordion.Item
+        key={semesterNum}
+        value={String(semesterNum)}
+        ref={semesterNum === 7 ? exchangeCoursesRef : undefined}
+      >
         <Accordion.Control>
           {`Semester ${semesterNum}`}
           {MSC_SEMESTER_TITLES[semesterNum] && (
@@ -69,13 +85,6 @@ function Education() {
         </Accordion.Panel>
       </Accordion.Item>
     );
-
-    if (semesterNum === 7)
-      return (
-        <div key={semesterNum} ref={exchangeCoursesRef}>
-          {React.cloneElement(item, { key: undefined })}
-        </div>
-      );
 
     return item;
   });
@@ -130,14 +139,17 @@ function Education() {
             {mscSemesterItems}
           </Accordion>
         </EducationAccordionItem>
-        <EducationAccordionItem
-          value="exchange"
-          university="Korea Advanced Institute of Science and Technology (KAIST)"
-          program="Exchange Semester, AI and Machine Learning"
-          date="Aug 2024 – Jan 2025"
-        >
-          <Anchor onClick={redirectToExchangeCourses}>See courses</Anchor>
-        </EducationAccordionItem>
+        <div ref={exchangeRef}>
+          <EducationAccordionItem
+            value="exchange"
+            university="Korea Advanced Institute of Science and Technology (KAIST)"
+            program="Exchange Semester, AI and Machine Learning"
+            date="Aug 2024 – Jan 2025"
+            onClick={handleExchangeClick}
+          >
+            <Anchor onClick={redirectToExchangeCourses}>See courses</Anchor>
+          </EducationAccordionItem>
+        </div>
       </Accordion>
     </Stack>
   );

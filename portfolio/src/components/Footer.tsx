@@ -19,7 +19,7 @@ function Footer() {
           pb="xl"
           direction={{ base: "column", xs: "row" }}
         >
-          <Text>Lukas Ingemarsson</Text>
+          <Text>&copy; 2025 Lukas Ingemarsson</Text>
           <Group
             gap={0}
             justify="flex-end"

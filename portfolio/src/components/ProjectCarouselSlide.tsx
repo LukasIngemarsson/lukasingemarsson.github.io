@@ -19,7 +19,12 @@ function ProjectCarouselSlide({
   const [activeTab, setActiveTab] = useState<string | null>("0");
 
   return (
-    <Carousel.Slide p="lg" pos="relative" bg={isEven ? "black" : "dark"}>
+    <Carousel.Slide
+      key={title}
+      p="lg"
+      pos="relative"
+      bg={isEven ? "var(--primary)" : "var(--secondary)"}
+    >
       <Stack gap="xs">
         <Title order={2}>{title}</Title>
         <Text>{description}</Text>
@@ -46,6 +51,7 @@ function ProjectCarouselSlide({
           <Tabs.List>
             {repoNames.map((_, idx) => (
               <Tabs.Tab
+                key={String(idx)}
                 value={String(idx)}
                 onMouseEnter={() => setActiveTab(String(idx))}
               >
@@ -54,7 +60,7 @@ function ProjectCarouselSlide({
             ))}
           </Tabs.List>
           {repoNames.map((repo, idx) => (
-            <Tabs.Panel value={String(idx)}>
+            <Tabs.Panel key={String(idx)} value={String(idx)}>
               <GitHubRepoButton
                 iconProps={{ size: 30 }}
                 repoName={repo}

@@ -17,7 +17,7 @@ export const SLIDE_DATA = [
     title: "CLIP PubMedVision",
     description:
       "A project where the objective was to investigate the potential of (medical) image-text \
-      data when fine-tuning CLIP for image classification, in absence of labeled data.",
+      data when fine-tuning OpenAI's CLIP model for image classification, in absence of labeled data.",
     repoNames: ["clip-pubmedvision"],
   },
   {

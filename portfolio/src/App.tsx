@@ -3,7 +3,13 @@ import "@mantine/carousel/styles.css";
 
 import { useEffect, useRef, useState } from "react";
 
-import { createTheme, MantineProvider, Stack } from "@mantine/core";
+import {
+  createTheme,
+  MantineProvider,
+  Stack,
+  type CSSVariablesResolver,
+} from "@mantine/core";
+import ColorSchemeToggle from "./components/ColorSchemeToggle";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
@@ -13,6 +19,18 @@ import { SECTIONS_DATA } from "./data/sections.data";
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
   primaryColor: "blue",
+});
+
+const cssVariablesResolver: CSSVariablesResolver = (theme) => ({
+  variables: {},
+  light: {
+    "--primary": "white",
+    "--secondary": theme.colors.gray[1],
+  },
+  dark: {
+    "--primary": "dark",
+    "--secondary": theme.colors.dark[8],
+  },
 });
 
 function App() {
@@ -43,17 +61,23 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const marginX = "40px";
   const marginY = "40px";
 
   return (
     <>
       <style>{"html { scroll-behavior: smooth; }"}</style>
-      <MantineProvider defaultColorScheme="auto" theme={theme}>
+      <MantineProvider
+        defaultColorScheme="auto"
+        theme={theme}
+        cssVariablesResolver={cssVariablesResolver}
+      >
+        <ColorSchemeToggle pos="fixed" top={marginY} right={marginX} />
         <Navbar
           activeSection={activeSection}
           pos="fixed"
           top={marginY}
-          left="40px"
+          left={marginX}
         />
         <Stack
           align="left"

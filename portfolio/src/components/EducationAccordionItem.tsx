@@ -6,8 +6,9 @@ type Props = {
   university: string;
   program: string;
   date: string;
-  comment?: string;
   children: ReactNode;
+  onClick?: () => void;
+  comment?: string;
 };
 
 function EducationAccordionItem({
@@ -15,11 +16,12 @@ function EducationAccordionItem({
   university,
   program,
   date,
-  comment,
   children,
+  onClick,
+  comment,
 }: Props) {
   return (
-    <Accordion.Item value={value}>
+    <Accordion.Item value={value} onClick={onClick}>
       <Accordion.Control>
         <Group justify="space-between" pr="lg">
           <Stack gap="xs">
