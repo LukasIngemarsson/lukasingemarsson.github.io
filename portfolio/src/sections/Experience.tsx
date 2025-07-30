@@ -5,7 +5,7 @@ import { EXPERIENCE_DATA } from "../data/experience.data";
 
 function Experience() {
   return (
-    <Stack w="90%">
+    <Stack>
       <Stack gap={0}>
         <Text size="s" c="dimmed">
           (Notable)

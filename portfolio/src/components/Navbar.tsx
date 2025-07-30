@@ -5,7 +5,7 @@ type Props = PaperProps & { activeSection: string };
 
 function Navbar({ activeSection, ...paperProps }: Props) {
   return (
-    <Paper p="md" radius="md" w={130} withBorder {...paperProps}>
+    <Paper p="md" radius="md" w={120} withBorder {...paperProps}>
       <Stack gap="xs">
         {SECTIONS_DATA.map(({ id, title }) => {
           const isActive = activeSection === id;

@@ -15,6 +15,7 @@ import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 
 import { SECTIONS_DATA } from "./data/sections.data";
+import Links from "./components/Links";
 
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
@@ -61,7 +62,7 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const marginX = "40px";
+  const marginX = "30px";
   const marginY = "40px";
 
   return (
@@ -94,6 +95,7 @@ function App() {
             </div>
           ))}
         </Stack>
+        <Links />
         <Footer />
       </MantineProvider>
     </>

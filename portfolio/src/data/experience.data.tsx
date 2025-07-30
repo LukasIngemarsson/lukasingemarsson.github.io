@@ -46,7 +46,7 @@ const arcticGamingDescription = (
       , both individually and in a team environment. <br />
     </Text>
     <Title order={4}>Most Significant Achievements</Title>
-    <List icon={<IconChevronRight size={12} />}>
+    <List icon={<IconChevronRight size={12} />} pl={0}>
       <List.Item>
         Red Bull Mobile Esports Open Swedish Championship: 1st place, Stockholm
         (

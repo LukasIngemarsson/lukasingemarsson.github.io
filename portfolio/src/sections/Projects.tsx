@@ -8,13 +8,12 @@ function Projects() {
   return (
     <Stack>
       <Title order={1}>Projects</Title>
-      <Paper withBorder w="50%" p={0}>
+      <Paper withBorder p={0}>
         <Carousel
-          height={300}
+          height={275}
           controlsOffset="xs"
           controlSize={24}
-          slideSize="80%"
-          slideGap="sm"
+          slideSize="50%"
         >
           {SLIDE_DATA.map((slide, idx) => (
             <ProjectCarouselSlide

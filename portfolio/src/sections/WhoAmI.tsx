@@ -18,22 +18,25 @@ function WhoAmI() {
   return (
     <Stack>
       <Title order={1}>Who Am I?</Title>
-      <List icon={<IconChevronRight size={12} />} size="xl">
+      <List icon={<IconChevronRight size={12} />} size="lg">
         <List.Item>
-          {calculateMyAge()}-year-old student (class of 2026) currently based in
-          Linköping and Stockholm, Sweden.
+          I am a {calculateMyAge()}-year-old student (class of 2026) currently
+          based in Linköping and Stockholm, Sweden.
         </List.Item>
         <List.Item>
-          Born in Connecticut, USA, but have spent the majority of my life in
-          Sweden (moved at 6 y/o).
+          Born in Connecticut, USA, but raised in Sweden from the age of six.
         </List.Item>
         <List.Item>
-          Interested in most CS-related topics, especially AI and machine
-          learning.
+          Interested in most CS-related topics, but especially passionate about
+          AI and machine learning.
         </List.Item>
         <List.Item>
-          Greatly enjoy learning new things, challenging myself, and working
-          with others to achieve set goals.
+          Greatly enjoy learning new things, challenging myself, and
+          collaborating with others to achieve meaningful goals.
+        </List.Item>
+        <List.Item>
+          Also a big sports enthusiast – particularly ice hockey, tennis, and
+          the lesser-known winter sport of bandy.
         </List.Item>
       </List>
     </Stack>
