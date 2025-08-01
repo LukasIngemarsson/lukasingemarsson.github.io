@@ -19,6 +19,8 @@ function ProjectCarouselSlide({
 }: Props) {
   const [activeTab, setActiveTab] = useState<string | null>("0");
 
+  const maxButtonWidth = 210;
+
   return (
     <Carousel.Slide
       key={title}
@@ -32,12 +34,13 @@ function ProjectCarouselSlide({
       </Stack>
       {repoNames.length === 1 ? (
         <GitHubRepoButton
-          iconProps={{ size: 30 }}
           repoName={repoNames[0]}
           pos="absolute"
           bottom={0}
           right={0}
           m="md"
+          maw={maxButtonWidth}
+          iconProps={{ size: 30 }}
         />
       ) : (
         <Tabs
@@ -63,9 +66,9 @@ function ProjectCarouselSlide({
           {repoNames.map((repo, idx) => (
             <Tabs.Panel key={String(idx)} value={String(idx)}>
               <GitHubRepoButton
-                iconProps={{ size: 30 }}
                 repoName={repo}
-                w={210}
+                iconProps={{ size: 30 }}
+                w={maxButtonWidth}
               />
             </Tabs.Panel>
           ))}

@@ -4,7 +4,11 @@ import { IconBrandGithub, type IconProps } from "@tabler/icons-react";
 type Props = ButtonProps & { iconProps?: IconProps; repoName: string };
 
 function GitHubRepoButton({ iconProps, repoName, ...buttonProps }: Props) {
-  const { size = 20, stroke = 1.5, ...restIconProps } = iconProps || {};
+  const {
+    size: iconSize = 20,
+    stroke = 1.5,
+    ...restIconProps
+  } = iconProps || {};
 
   return (
     <Button
@@ -12,11 +16,19 @@ function GitHubRepoButton({ iconProps, repoName, ...buttonProps }: Props) {
       href={`https://github.com/LukasIngemarsson/${repoName}`}
       target="_blank"
       rightSection={
-        <IconBrandGithub size={size} stroke={stroke} {...restIconProps} />
+        <IconBrandGithub size={iconSize} stroke={stroke} {...restIconProps} />
       }
       {...buttonProps}
     >
-      <Code c="gray" fw={700}>
+      <Code
+        c="gray"
+        fw={700}
+        style={{
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+        }}
+      >
         {"/" + repoName}
       </Code>
     </Button>

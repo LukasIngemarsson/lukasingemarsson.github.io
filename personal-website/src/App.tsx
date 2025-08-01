@@ -73,12 +73,18 @@ function App() {
         theme={theme}
         cssVariablesResolver={cssVariablesResolver}
       >
-        <ColorSchemeToggle pos="fixed" top={marginY} right={marginX} />
+        <ColorSchemeToggle
+          pos="fixed"
+          top={marginY}
+          right={marginX}
+          visibleFrom="sm"
+        />
         <Navbar
           activeSection={activeSection}
           pos="fixed"
           top={marginY}
           left={marginX}
+          visibleFrom="lg"
         />
         <Stack
           align="left"

@@ -1,19 +1,24 @@
 import { Carousel } from "@mantine/carousel";
-import { Paper, Stack, Title } from "@mantine/core";
+import { Paper, Stack, Title, useMantineTheme } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import ProjectCarouselSlide from "../components/ProjectCarouselSlide";
 
 import { SLIDE_DATA } from "../data/projects.data";
 
 function Projects() {
+  const theme = useMantineTheme();
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+  const isTablet = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
+
   return (
     <Stack>
       <Title order={1}>Projects</Title>
       <Paper withBorder p={0}>
         <Carousel
-          height={275}
+          height={isMobile ? 350 : isTablet ? 275 : 300}
           controlsOffset="xs"
-          controlSize={24}
-          slideSize="50%"
+          controlSize={isMobile ? 32 : 24}
+          slideSize={isMobile ? "100%" : isTablet ? "75%" : "50%"}
         >
           {SLIDE_DATA.map((slide, idx) => (
             <ProjectCarouselSlide
