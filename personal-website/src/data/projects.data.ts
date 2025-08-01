@@ -33,6 +33,6 @@ export const SLIDE_DATA = [
     description:
       "A minimalistic personal website that I created as a fun side project, which you are looking \
       at right now!",
-    repoNames: ["personal-website"],
+    repoNames: ["lukasingemarsson.github.io"],
   },
 ];

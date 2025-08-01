@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "homepage": "https://lukasingemarsson.github.io/personal-website",
+  "homepage": "https://lukasingemarsson.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -m 'Deploy'"
   },
   "dependencies": {
     "@mantine/carousel": "^8.1.2",

@@ -35,8 +35,8 @@ function WhoAmI() {
           collaborating with others to achieve meaningful goals.
         </List.Item>
         <List.Item>
-          Also a big sports enthusiast – particularly ice hockey, tennis, and
-          the lesser-known winter sport of bandy.
+          Also a big sports enthusiast – particularly a fan ice hockey, tennis,
+          and the lesser-known winter sport of bandy.
         </List.Item>
       </List>
     </Stack>
