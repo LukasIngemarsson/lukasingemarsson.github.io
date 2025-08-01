@@ -2,7 +2,7 @@ import { Group, Stack, Title } from "@mantine/core";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
-  IconFileText,
+  // IconFileText,
   IconMail,
 } from "@tabler/icons-react";
 import LinkIcon from "./LinkIcon";

@@ -29,10 +29,10 @@ export const SLIDE_DATA = [
     repoNames: ["musicle"],
   },
   {
-    title: "Portfolio",
+    title: "Personal Website",
     description:
-      "A portfolio website that I created as a fun side project, which you are looking\
+      "A minimalistic personal website that I created as a fun side project, which you are looking \
       at right now!",
-    repoNames: ["portfolio"],
+    repoNames: ["personal-website"],
   },
 ];
