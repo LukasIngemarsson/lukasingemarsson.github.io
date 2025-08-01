@@ -13,9 +13,9 @@ import ColorSchemeToggle from "./components/ColorSchemeToggle";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
+import Links from "./components/Links";
 
 import { SECTIONS_DATA } from "./data/sections.data";
-import Links from "./components/Links";
 
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",

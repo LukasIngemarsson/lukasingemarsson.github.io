@@ -1,4 +1,5 @@
 import { Accordion, Group, Stack, Text, Title } from "@mantine/core";
+
 import type { ReactNode } from "react";
 
 type Props = {

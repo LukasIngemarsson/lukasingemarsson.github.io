@@ -1,4 +1,5 @@
 import { Anchor, Paper, Stack, type PaperProps } from "@mantine/core";
+
 import { SECTIONS_DATA } from "../data/sections.data";
 
 type Props = PaperProps & { activeSection: string };

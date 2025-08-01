@@ -1,4 +1,5 @@
 import { Timeline, Stack, Title, Text } from "@mantine/core";
+
 import type { ReactNode } from "react";
 
 type Props = {

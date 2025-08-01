@@ -7,12 +7,11 @@ import {
   Image,
   Text,
 } from "@mantine/core";
+import GitHubIcon from "./GitHubIcon";
+import LinkedInIcon from "./LinkedInIcon";
 
 import banner from "../assets/banner.jpeg";
 import portrait from "../assets/portrait.jpeg";
-
-import GitHubIcon from "./GitHubIcon";
-import LinkedInIcon from "./LinkedInIcon";
 
 function Banner() {
   return (
