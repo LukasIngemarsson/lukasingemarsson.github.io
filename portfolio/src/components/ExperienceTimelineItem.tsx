@@ -6,7 +6,7 @@ type Props = {
   role: string;
   organisation: string;
   date: string;
-  children: ReactNode;
+  description: string | ReactNode;
 };
 
 function ExperienceTimelineItem({
@@ -14,7 +14,7 @@ function ExperienceTimelineItem({
   role,
   organisation,
   date,
-  children,
+  description,
 }: Props) {
   return (
     <Timeline.Item
@@ -33,7 +33,11 @@ function ExperienceTimelineItem({
         </Stack>
       }
     >
-      {children}
+      {typeof description === "string" ? (
+        <Text>{description}</Text>
+      ) : (
+        description
+      )}
     </Timeline.Item>
   );
 }

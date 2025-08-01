@@ -25,7 +25,7 @@ export const SLIDE_DATA = [
     description:
       "A social music app notably featuring a multiplayer music quiz that takes each \
       participant's Spotify listening habits into account, and a multiplayer queue session with a \
-      fair voting system.",
+      fair rank-voting system.",
     repoNames: ["musicle"],
   },
   {

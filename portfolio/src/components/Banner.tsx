@@ -31,7 +31,7 @@ function Banner() {
       </Group>
       <Group align="center" gap="xl" p="md">
         <Image radius="50%" src={portrait} h={150} w="auto"></Image>
-        <Paper radius="md" p="md">
+        <Paper radius="md" p="md" withBorder>
           <Stack gap={3}>
             <Title size="3.5rem">Hello, I'm Lukas</Title>
             <Text size="xl">

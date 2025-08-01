@@ -7,35 +7,6 @@ import {
 } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
 
-/* Stored the experience descriptions directly as JSX elements, as the
-format between different experience's differed a lot. */
-
-const scaniaTratonDescription = (
-  <TypographyStylesProvider>
-    <Text>
-      Summer '25: Developed an automatic scenario extraction tool, using LLMs to
-      handle sparse image-text input data.
-    </Text>
-    <Text>
-      Summer '24: Worked with ML-based lane detection solutions for offline
-      perception in autonomous vehicles.
-    </Text>
-    <Text>
-      Summer '23: Completed a 3-stage project surrounding the V&V, segmentation,
-      and application of in-house autonomous vehicle data.
-    </Text>
-  </TypographyStylesProvider>
-);
-
-const linkopingUniversityDescription = (
-  <TypographyStylesProvider>
-    <Text>
-      Was responsible for a group of first-year IT students, offering guidance
-      in questions regarding all of their ongoing courses.
-    </Text>
-  </TypographyStylesProvider>
-);
-
 const arcticGamingDescription = (
   <TypographyStylesProvider>
     <Text>
@@ -79,16 +50,36 @@ const arcticGamingDescription = (
 
 export const EXPERIENCE_DATA = [
   {
-    role: "Autonomous Systems Intern",
-    organisation: "Scania/TRATON",
-    date: "Summers 2023/24/25",
-    description: scaniaTratonDescription,
+    role: "Autonomous Systems Summer Substitute",
+    organisation: "TRATON",
+    date: "Jun 2025 – Aug 2025",
+    description:
+      "Developed an automatic scenario extraction tool, using LLMs to generate \
+      intricate scenario code from sparse image-text input data.",
+  },
+  {
+    role: "Autonomous Systems Summer Substitute",
+    organisation: "Scania",
+    date: "Jun 2024 – Aug 2024",
+    description:
+      "Worked with ML-based lane detection solutions for offline perception in \
+      autonomous vehicles.",
+  },
+  {
+    role: "Autonomous Systems Summer Intern",
+    organisation: "Scania",
+    date: "Jun 2023 – Aug 2023",
+    description:
+      "Completed a 3-stage project surrounding the V&V, segmentation, and \
+      application of in-house autonomous vehicle data.",
   },
   {
     role: "Teaching Assistant",
     organisation: "Linköping University",
     date: "Jan 2023 – May 2023",
-    description: linkopingUniversityDescription,
+    description:
+      "Was responsible for a group of first-year IT students, offering guidance in \
+      questions regarding all of their ongoing courses.",
   },
   {
     role: "Professional Esports Player",

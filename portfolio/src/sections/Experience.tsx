@@ -14,9 +14,7 @@ function Experience() {
       </Stack>
       <Timeline bulletSize={20}>
         {EXPERIENCE_DATA.map((experience, index) => (
-          <ExperienceTimelineItem key={index} {...experience}>
-            {experience.description}
-          </ExperienceTimelineItem>
+          <ExperienceTimelineItem key={index} {...experience} />
         ))}
       </Timeline>
     </Stack>
