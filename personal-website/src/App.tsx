@@ -69,7 +69,7 @@ function App() {
     <>
       <style>{"html { scroll-behavior: smooth; }"}</style>
       <MantineProvider
-        defaultColorScheme="auto"
+        defaultColorScheme="dark"
         theme={theme}
         cssVariablesResolver={cssVariablesResolver}
       >

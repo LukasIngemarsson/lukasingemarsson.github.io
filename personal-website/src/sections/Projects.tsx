@@ -3,7 +3,7 @@ import { Paper, Stack, Title, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import ProjectCarouselSlide from "../components/ProjectCarouselSlide";
 
-import { SLIDE_DATA } from "../data/projects.data";
+import { PROJECTS_DATA } from "../data/projects.data";
 
 function Projects() {
   const theme = useMantineTheme();
@@ -20,7 +20,7 @@ function Projects() {
           controlSize={isMobile ? 32 : 24}
           slideSize={isMobile ? "100%" : isTablet ? "75%" : "50%"}
         >
-          {SLIDE_DATA.map((slide, idx) => (
+          {PROJECTS_DATA.map((slide, idx) => (
             <ProjectCarouselSlide
               key={slide.title}
               {...slide}

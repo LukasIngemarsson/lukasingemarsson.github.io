@@ -1,4 +1,4 @@
-export const SLIDE_DATA = [
+export const PROJECTS_DATA = [
   {
     title: "Venom",
     description:
