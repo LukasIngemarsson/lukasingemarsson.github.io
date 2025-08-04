@@ -14,6 +14,8 @@ import banner from "../assets/banner.jpeg";
 import portrait from "../assets/portrait.jpeg";
 
 function Banner() {
+  const sharedIconProps = { size: "md", iconProps: { size: 25 } };
+
   return (
     <BackgroundImage src={banner} radius="md" pos="relative" p="lg">
       <Group
@@ -23,10 +25,10 @@ function Banner() {
         pos="absolute"
         top={0}
         right={0}
-        m={12}
+        m={8}
       >
-        <LinkedInIcon size="md" iconProps={{ size: 25 }}></LinkedInIcon>
-        <GitHubIcon size="md" iconProps={{ size: 25 }}></GitHubIcon>
+        <LinkedInIcon {...sharedIconProps}></LinkedInIcon>
+        <GitHubIcon {...sharedIconProps}></GitHubIcon>
       </Group>
       <Group align="center" gap="xl" p="md">
         <Image radius="50%" src={portrait} h={150} w="auto"></Image>
