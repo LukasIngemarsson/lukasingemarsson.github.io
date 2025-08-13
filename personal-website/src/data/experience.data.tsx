@@ -54,8 +54,8 @@ export const EXPERIENCE_DATA = [
     organisation: "TRATON",
     date: "Jun 2025 – Aug 2025",
     description:
-      "Developed an automatic scenario extraction tool, using LLMs to generate \
-      intricate scenario code from sparse image-text input data.",
+      "Developed an automatic traffic accident scenario extraction pipeline, \
+      generating intricate simulation scenario code from minimal image-text input data.",
   },
   {
     role: "Autonomous Systems Summer Substitute",
