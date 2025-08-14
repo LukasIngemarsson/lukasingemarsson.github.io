@@ -100,8 +100,7 @@ function Education() {
         <EducationAccordionItem
           value="msc"
           university="Linköping University"
-          program="Master of Science in Engineering – MSE (Swedish:
-                    Civilingenjör), Information Technology"
+          program="Master of Science in Engineering – MSE, Information Technology"
           date="Aug 2021 – Jun 2026"
           comment="Specialization: AI and Machine Learning"
         >
