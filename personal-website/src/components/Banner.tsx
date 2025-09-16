@@ -31,12 +31,12 @@ function Banner() {
         <GitHubIcon {...sharedIconProps}></GitHubIcon>
       </Group>
       <Group align="center" gap="xl" p="md">
-        <Image radius="50%" src={portrait} h={150} w="auto"></Image>
+        <Image radius="50%" src={portrait} h={140} w="auto"></Image>
         <Paper radius="md" p="md" withBorder>
           <Stack gap={3}>
             <Title size="3.5rem">Hello, I'm Lukas</Title>
             <Text size="xl">
-              Final-Year M.Sc. Student in AI & ML @ Linköping University
+              Final-Year M.Sc. Student in AI/ML @ Linköping University
             </Text>
           </Stack>
         </Paper>

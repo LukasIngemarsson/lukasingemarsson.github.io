@@ -10,7 +10,8 @@ import { IconChevronRight } from "@tabler/icons-react";
 const arcticGamingDescription = (
   <TypographyStylesProvider>
     <Text>
-      Competed internationally as a professional player in the strategy game{" "}
+      Competed internationally as a signed professional player in the strategy
+      game{" "}
       <Anchor href="https://en.wikipedia.org/wiki/Clash_Royale" target="_blank">
         Clash Royale
       </Anchor>
@@ -54,16 +55,16 @@ export const EXPERIENCE_DATA = [
     organisation: "TRATON",
     date: "Jun 2025 – Aug 2025",
     description:
-      "Developed an automatic traffic accident scenario extraction pipeline, \
-      generating intricate simulation scenario code from minimal image-text input data.",
+      "Developed a traffic scenario extraction pipeline, enabling generation of intricate \
+      simulation scenario code from minimal image-text input data using LLMs.",
   },
   {
     role: "Autonomous Systems Summer Substitute",
     organisation: "Scania",
     date: "Jun 2024 – Aug 2024",
     description:
-      "Worked with ML-based lane detection solutions for offline perception in \
-      autonomous vehicles.",
+      "Evaluated and improved ML-based lane detection models for offline perception \
+      in autonomous vehicles.",
   },
   {
     role: "Autonomous Systems Summer Intern",

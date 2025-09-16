@@ -100,7 +100,7 @@ function Education() {
         <EducationAccordionItem
           value="msc"
           university="Linköping University"
-          program="Master of Science in Engineering – MSE, Information Technology"
+          program="Master of Science in Engineering, Information Technology"
           date="Aug 2021 – Jun 2026"
           comment="Specialization: AI and Machine Learning"
         >
@@ -110,7 +110,7 @@ function Education() {
               shadow="xs"
               p="xs"
               display="inline-block"
-              w="100px"
+              w="90px"
               style={{
                 cursor: "default",
                 textAlign: "center",
@@ -119,7 +119,7 @@ function Education() {
               onMouseEnter={() => setShowGpa(true)}
               onMouseLeave={() => setShowGpa(false)}
             >
-              {showGpa ? "5.0 / 5.0" : "GPA"}
+              {showGpa ? "5.0/5.0" : "GPA"}
             </Paper>
             <Button
               onClick={(event) => {

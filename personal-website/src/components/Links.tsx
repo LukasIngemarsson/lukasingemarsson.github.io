@@ -2,7 +2,6 @@ import { Group, Stack, Title } from "@mantine/core";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
-  // IconFileText,
   IconMail,
 } from "@tabler/icons-react";
 import LinkIcon from "./LinkIcon";
@@ -14,9 +13,6 @@ function Links() {
     <Stack align="center" justify="center" pt={50}>
       <Title size="3rem">Get in Touch!</Title>
       <Group>
-        {/* <LinkIcon tooltipLabel="Download CV/Resume" href="/cv.pdf">
-          <IconFileText size={iconSize} />
-        </LinkIcon> */}
         <LinkIcon
           tooltipLabel="Email Me"
           href="mailto:ingemarsson.lukas@gmail.com"
