@@ -19,6 +19,8 @@ function Projects() {
           controlsOffset="xs"
           controlSize={isMobile ? 32 : 24}
           slideSize={isMobile ? "100%" : isTablet ? "75%" : "50%"}
+          withControls={!isMobile}
+          withIndicators={isMobile}
         >
           {PROJECTS_DATA.map((slide, idx) => (
             <ProjectCarouselSlide
