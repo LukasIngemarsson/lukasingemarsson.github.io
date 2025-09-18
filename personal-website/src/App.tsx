@@ -90,7 +90,7 @@ function App() {
           align="left"
           justify="center"
           gap="xl"
-          w="70%"
+          w={{ base: "85%", md: "70%" }}
           my={marginY}
           mx="auto"
         >
