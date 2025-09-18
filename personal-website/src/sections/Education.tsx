@@ -13,7 +13,12 @@ import EducationAccordionItem from "../components/EducationAccordionItem";
 
 import { useRef, useState } from "react";
 
-import { MSC_SEMESTER_TITLES, MSC_SEMESTER_DATA } from "../data/education.data";
+import {
+  MSC_PROPS,
+  MSC_SEMESTER_TITLES,
+  MSC_SEMESTER_DATA,
+  EXCHANGE_PROPS,
+} from "../data/education.data";
 
 function Education() {
   const [mscOpenedItems, setMscOpenedItems] = useState<string[]>([]);
@@ -97,13 +102,7 @@ function Education() {
         value={openedParentAccordion}
         onChange={setOpenedParentAccordion}
       >
-        <EducationAccordionItem
-          value="msc"
-          university="Linköping University"
-          program="Master of Science in Engineering, Information Technology"
-          date="Aug 2021 – Jun 2026"
-          comment="Specialization: AI and Machine Learning"
-        >
+        <EducationAccordionItem {...MSC_PROPS}>
           <Group justify="space-between" pb="10px">
             <Paper
               withBorder
@@ -140,11 +139,8 @@ function Education() {
         </EducationAccordionItem>
         <div ref={exchangeRef}>
           <EducationAccordionItem
-            value="exchange"
-            university="Korea Advanced Institute of Science and Technology (KAIST)"
-            program="Exchange Semester, AI and Machine Learning"
-            date="Aug 2024 – Jan 2025"
             onClick={handleExchangeClick}
+            {...EXCHANGE_PROPS}
           >
             <Anchor onClick={redirectToExchangeCourses}>See courses</Anchor>
           </EducationAccordionItem>

@@ -1,3 +1,18 @@
+export const MSC_PROPS = {
+  value: "msc",
+  university: "Linköping University",
+  program: "Master of Science in Engineering, Information Technology",
+  date: "Aug 2021 – Jun 2026",
+  comment: "Specialization: AI and Machine Learning",
+};
+
+export const EXCHANGE_PROPS = {
+  value: "exchange",
+  university: "Korea Advanced Institute of Science and Technology (KAIST)",
+  program: "Exchange Semester, AI and Machine Learning",
+  date: "Aug 2024 – Jan 2025",
+};
+
 export const MSC_SEMESTER_TITLES: { [key: number]: string } = {
   6: "B.Sc. Thesis",
   7: "Exchange @ KAIST, South Korea",
