@@ -11,7 +11,7 @@ function Links() {
 
   return (
     <Stack align="center" justify="center" pt={50}>
-      <Title size="3rem">Get in Touch!</Title>
+      <Title size="2.5rem">Get in Touch!</Title>
       <Group>
         <LinkIcon
           tooltipLabel="Email Me"

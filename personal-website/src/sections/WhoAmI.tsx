@@ -8,8 +8,8 @@ function WhoAmI() {
     <Stack>
       <Title order={1}>Who Am I?</Title>
       <List icon={<IconChevronRight size={12} />} size="lg">
-        {WHOAMI_DATA.map((text) => (
-          <List.Item>{text}</List.Item>
+        {WHOAMI_DATA.map((text, index) => (
+          <List.Item key={index}>{text}</List.Item>
         ))}
       </List>
     </Stack>

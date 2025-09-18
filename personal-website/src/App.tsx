@@ -71,21 +71,21 @@ function App() {
     <>
       <style>
         {`
-        html { scroll-behavior: smooth; }         
-        .mantine-Carousel-indicator {
-          width: 12px;
-          height: 4px;
-          opacity: 0.4 !important;
-          transition: width 250ms ease;
-        }
-        .mantine-Carousel-indicator[data-active="true"] {
-          width: 40px;
-          opacity: 0.8 !important;
-        }
-        .mantine-Carousel-control[data-inactive="true"] {
-          opacity: 0;
-          cursor: default;
-        }
+          html { scroll-behavior: smooth; }         
+          .mantine-Carousel-indicator {
+            width: 12px;
+            height: 4px;
+            opacity: 0.4 !important;
+            transition: width 250ms ease;
+          }
+          .mantine-Carousel-indicator[data-active="true"] {
+            width: 40px;
+            opacity: 0.8 !important;
+          }
+          .mantine-Carousel-control[data-inactive="true"] {
+            opacity: 0;
+            cursor: default;
+          }
         `}
       </style>
       <MantineProvider
