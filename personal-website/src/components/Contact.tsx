@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons-react";
 import LinkIcon from "./LinkIcon";
 
-function Links() {
+function Contact() {
   const iconSize = 24;
 
   return (
@@ -36,4 +36,4 @@ function Links() {
   );
 }
 
-export default Links;
+export default Contact;

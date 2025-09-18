@@ -13,7 +13,7 @@ import ColorSchemeToggle from "./components/ColorSchemeToggle";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
-import Links from "./components/Links";
+import Contact from "./components/Contact";
 
 import { SECTIONS_DATA } from "./data/sections.data";
 import { useMediaQuery } from "@mantine/hooks";
@@ -124,7 +124,7 @@ function App() {
             </div>
           ))}
         </Stack>
-        <Links />
+        <Contact />
         <Footer />
       </MantineProvider>
     </>
