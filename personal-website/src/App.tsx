@@ -16,6 +16,7 @@ import Navbar from "./components/Navbar";
 import Links from "./components/Links";
 
 import { SECTIONS_DATA } from "./data/sections.data";
+import { useMediaQuery } from "@mantine/hooks";
 
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
@@ -36,6 +37,7 @@ const cssVariablesResolver: CSSVariablesResolver = (theme) => ({
 
 function App() {
   const [activeSection, setActiveSection] = useState(SECTIONS_DATA[0].id);
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const sectionRefs = Object.fromEntries(
     SECTIONS_DATA.map(({ id }) => [id, useRef<HTMLDivElement>(null)])
@@ -69,7 +71,7 @@ function App() {
     <>
       <style>{"html { scroll-behavior: smooth; }"}</style>
       <MantineProvider
-        defaultColorScheme="dark"
+        defaultColorScheme={isMobile ? "dark" : "auto"}
         theme={theme}
         cssVariablesResolver={cssVariablesResolver}
       >
@@ -90,7 +92,7 @@ function App() {
           align="left"
           justify="center"
           gap="xl"
-          w={{ base: "85%", md: "70%" }}
+          w={{ base: "85%", sm: "70%" }}
           my={marginY}
           mx="auto"
         >
