@@ -72,6 +72,9 @@ function App() {
       <style>
         {`
           html { scroll-behavior: smooth; }         
+          .mantine-List-itemWrapper {
+            align-items: flex-start !important;
+          }
           .mantine-Carousel-indicator {
             width: 12px;
             height: 4px;
