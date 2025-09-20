@@ -1,9 +1,15 @@
-import { Button, Code, type ButtonProps } from "@mantine/core";
+import {
+  Button,
+  Code,
+  useMantineColorScheme,
+  type ButtonProps,
+} from "@mantine/core";
 import { IconBrandGithub, type IconProps } from "@tabler/icons-react";
 
 type Props = ButtonProps & { iconProps?: IconProps; repoName: string };
 
 function GitHubRepoButton({ iconProps, repoName, ...buttonProps }: Props) {
+  const { colorScheme } = useMantineColorScheme();
   const {
     size: iconSize = 20,
     stroke = 1.5,
@@ -21,7 +27,7 @@ function GitHubRepoButton({ iconProps, repoName, ...buttonProps }: Props) {
       {...buttonProps}
     >
       <Code
-        c="gray"
+        c={colorScheme === "dark" ? "gray" : "black"}
         fw={700}
         style={{
           overflow: "hidden",
