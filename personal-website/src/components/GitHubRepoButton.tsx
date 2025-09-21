@@ -1,7 +1,7 @@
 import {
   Button,
   Code,
-  useMantineColorScheme,
+  useComputedColorScheme,
   type ButtonProps,
 } from "@mantine/core";
 import { IconBrandGithub, type IconProps } from "@tabler/icons-react";
@@ -9,7 +9,8 @@ import { IconBrandGithub, type IconProps } from "@tabler/icons-react";
 type Props = ButtonProps & { iconProps?: IconProps; repoName: string };
 
 function GitHubRepoButton({ iconProps, repoName, ...buttonProps }: Props) {
-  const { colorScheme } = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme("dark");
+
   const {
     size: iconSize = 20,
     stroke = 1.5,
@@ -27,7 +28,7 @@ function GitHubRepoButton({ iconProps, repoName, ...buttonProps }: Props) {
       {...buttonProps}
     >
       <Code
-        c={colorScheme === "dark" ? "gray" : "black"}
+        c={computedColorScheme === "dark" ? "gray" : "black"}
         fw={700}
         style={{
           overflow: "hidden",
