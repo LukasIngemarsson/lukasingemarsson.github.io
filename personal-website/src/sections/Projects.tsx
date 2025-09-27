@@ -1,7 +1,8 @@
 import { Carousel } from "@mantine/carousel";
-import { Paper, Stack, Title, useMantineTheme } from "@mantine/core";
+import { Paper, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import ProjectCarouselSlide from "../components/ProjectCarouselSlide";
+import Section from "../components/Section";
 
 import { PROJECTS_DATA } from "../data/projects.data";
 
@@ -11,13 +12,11 @@ function Projects() {
   const isTablet = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
 
   return (
-    <Stack>
-      <Title order={1}>Projects</Title>
+    <Section title="Projects">
       <Paper withBorder p={0}>
         <Carousel
           height={isMobile ? 350 : isTablet ? 275 : 300}
           controlsOffset="xs"
-          controlSize={isMobile ? 32 : 24}
           slideSize={isMobile ? "100%" : isTablet ? "75%" : "50%"}
           withControls={!isMobile}
           withIndicators={isMobile}
@@ -31,7 +30,7 @@ function Projects() {
           ))}
         </Carousel>
       </Paper>
-    </Stack>
+    </Section>
   );
 }
 

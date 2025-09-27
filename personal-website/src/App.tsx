@@ -85,6 +85,18 @@ function App() {
             width: 40px;
             opacity: 0.8 !important;
           }
+          [data-mantine-color-scheme="dark"] .mantine-Carousel-indicator {
+            background-color: var(--mantine-color-gray-4) !important;
+          }
+          [data-mantine-color-scheme="dark"] .mantine-Carousel-indicator[data-active="true"] {
+            background-color: var(--mantine-color-gray-0) !important;
+          } 
+          [data-mantine-color-scheme="light"] .mantine-Carousel-indicator {
+            background-color: var(--mantine-color-dark-4) !important;
+          }
+          [data-mantine-color-scheme="light"] .mantine-Carousel-indicator[data-active="true"] {
+            background-color: var(--mantine-color-dark-8) !important;
+          } 
           .mantine-Carousel-control[data-inactive="true"] {
             opacity: 0;
             cursor: default;

@@ -1,18 +1,18 @@
-import { Stack, Title, List } from "@mantine/core";
+import { List } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
+import Section from "../components/Section";
 
 import { WHOAMI_DATA } from "../data/whoami.data";
 
 function WhoAmI() {
   return (
-    <Stack>
-      <Title order={1}>Who Am I?</Title>
+    <Section title="Who Am I?">
       <List icon={<IconChevronRight size={12} />} size="lg">
         {WHOAMI_DATA.map((text, index) => (
           <List.Item key={index}>{text}</List.Item>
         ))}
       </List>
-    </Stack>
+    </Section>
   );
 }
 

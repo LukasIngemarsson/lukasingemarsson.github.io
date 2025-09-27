@@ -1,15 +1,14 @@
 import {
   Accordion,
   Table,
-  Title,
   Text,
-  Stack,
   Button,
   Group,
   Paper,
   Anchor,
 } from "@mantine/core";
 import EducationAccordionItem from "../components/EducationAccordionItem";
+import Section from "../components/Section";
 
 import { useRef, useState } from "react";
 
@@ -95,8 +94,7 @@ function Education() {
   });
 
   return (
-    <Stack>
-      <Title order={1}>Education</Title>
+    <Section title="Education">
       <Accordion
         variant="contained"
         value={openedParentAccordion}
@@ -146,7 +144,7 @@ function Education() {
           </EducationAccordionItem>
         </div>
       </Accordion>
-    </Stack>
+    </Section>
   );
 }
 
