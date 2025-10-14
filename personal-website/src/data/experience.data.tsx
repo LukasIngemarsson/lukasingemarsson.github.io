@@ -55,7 +55,7 @@ export const EXPERIENCE_DATA = [
     organisation: "TRATON",
     date: "Jun 2025 – Aug 2025",
     description:
-      "Developed a traffic scenario extraction pipeline, enabling generation of intricate \
+      "Developed a traffic scenario extraction pipeline, enabling generation of \
       simulation scenario code from minimal image-text input data using LLMs.",
   },
   {
