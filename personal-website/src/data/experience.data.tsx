@@ -55,8 +55,8 @@ export const EXPERIENCE_DATA = [
     organisation: "TRATON",
     date: "Jun 2025 – Aug 2025",
     description:
-      "Developed a traffic scenario extraction pipeline, enabling generation of \
-      simulation scenario code from minimal image-text input data using LLMs.",
+      "Developed an end-to-end generative pipeline using LLMs to synthesize complex \
+      car crash simulations from sparse image-text input data.",
   },
   {
     role: "Autonomous Systems Summer Substitute",
@@ -79,8 +79,8 @@ export const EXPERIENCE_DATA = [
     organisation: "Linköping University",
     date: "Jan 2023 – May 2023",
     description:
-      "Was responsible for a group of first-year IT students, offering guidance in \
-      questions regarding all of their ongoing courses.",
+      "Was responsible for a cohort of first-year IT students, offering guidance in \
+      questions regarding all their ongoing courses.",
   },
   {
     role: "Professional Esports Player",

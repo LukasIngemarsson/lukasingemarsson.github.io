@@ -12,9 +12,9 @@ const calculateMyAge = () => {
 };
 
 export const WHOAMI_DATA = [
-  `I am a ${calculateMyAge()}-year-old AI/ML student currently based in Linköping and Stockholm, Sweden.`,
-  "I was born in Connecticut, USA, but raised in Sweden from the age of six.",
-  "I have always loved solving problems, and have grown all the more fond of AI and ML solutions in recent years.",
-  "I greatly enjoy learning new things, challenging myself, and collaborating with others to achieve meaningful goals.",
-  "I am also a big sports enthusiast – particularly a fan of ice hockey, tennis, and the lesser-known winter sport of bandy.",
+  `A ${calculateMyAge()}-year-old AI/ML student currently based in Linköping and Stockholm, Sweden.`,
+  "Born in Connecticut, USA, but raised in Sweden from the age of six.",
+  "Have always loved solving problems, and have grown all the more fond of AI and ML solutions in recent years.",
+  "Greatly enjoy learning new things, challenging myself, and collaborating with others to achieve meaningful goals.",
+  "Also a big sports enthusiast – particularly a fan of ice hockey, tennis, and the lesser-known winter sport of bandy.",
 ];

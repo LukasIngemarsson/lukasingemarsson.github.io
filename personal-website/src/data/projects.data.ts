@@ -9,8 +9,9 @@ export const PROJECTS_DATA = [
   {
     title: "Algorithmic Problem Solving",
     description:
-      "I have recreationally solved algorithmic coding problems, mainly on Kattis and \
-      UVa Online Judge, and also made a library with the algorithms that I have implemented.",
+      "Solutions to algorithmic coding problems that I have solved recreationally, mainly on Kattis \
+      and UVa Online Judge, as well as a library containing my implementations of competitive \
+      programming algorithms.",
     repoNames: ["kattis", "uva-online-judge", "algo-lib"],
   },
   {
@@ -31,8 +32,8 @@ export const PROJECTS_DATA = [
   {
     title: "Personal Website",
     description:
-      "A minimalistic personal website that I created as a fun side project, which you are looking \
-      at right now!",
+      "A minimalistic personal website which you are looking \
+      at now!",
     repoNames: ["lukasingemarsson.github.io"],
   },
 ];
