@@ -56,7 +56,7 @@ export const EXPERIENCE_DATA = [
     date: "Jun 2025 – Aug 2025",
     description:
       "Developed an end-to-end generative pipeline using LLMs to synthesize complex \
-      car crash simulations from sparse image-text input data.",
+      multi-vehicle crash simulations from sparse image-text input data.",
   },
   {
     role: "Autonomous Systems Summer Substitute",
