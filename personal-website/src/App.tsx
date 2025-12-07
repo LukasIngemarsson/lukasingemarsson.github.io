@@ -4,23 +4,45 @@ import "@mantine/carousel/styles.css";
 import { useEffect, useRef, useState } from "react";
 
 import {
+  Box,
   createTheme,
   MantineProvider,
   Stack,
   type CSSVariablesResolver,
 } from "@mantine/core";
-import ColorSchemeToggle from "./components/ColorSchemeToggle";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
 
 import { SECTIONS_DATA } from "./data/sections.data";
 import { useMediaQuery } from "@mantine/hooks";
+import Header from "./components/Header";
 
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
-  primaryColor: "blue",
+  primaryColor: "custom",
+  colors: {
+    custom: [
+      "#edf0fd",
+      "#d7dcf4",
+      "#aab5ec",
+      "#7b8ce5",
+      "#5569df",
+      "#3e53dc",
+      "#3248db",
+      "#263ac3",
+      "#1f33ae",
+      "#0f2174",
+    ],
+  },
+  defaultRadius: "sm",
+  components: {
+    BackgroundImage: {
+      defaultProps: {
+        radius: "sm",
+      },
+    },
+  },
 });
 
 const cssVariablesResolver: CSSVariablesResolver = (theme) => ({
@@ -64,8 +86,9 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const marginX = "30px";
-  const marginY = "40px";
+  const marginY = 30;
+  const maxWidth = 950;
+  const headerHeight = 38;
 
   return (
     <>
@@ -108,26 +131,37 @@ function App() {
         theme={theme}
         cssVariablesResolver={cssVariablesResolver}
       >
-        <ColorSchemeToggle
+        <Box
           pos="fixed"
-          top={marginY}
-          right={marginX}
-          visibleFrom="sm"
+          top={0}
+          left={0}
+          right={0}
+          h={marginY + headerHeight}
+          bg="var(--mantine-color-body)"
+          style={{ zIndex: 999 }}
+          visibleFrom="lg"
         />
-        <Navbar
+        <Header
           activeSection={activeSection}
           pos="fixed"
           top={marginY}
-          left={marginX}
-          visibleFrom="lg"
+          left={0}
+          right={0}
+          h={headerHeight}
+          mx="auto"
+          maw={maxWidth}
+          style={{ zIndex: 1000 }}
+          visibleFrom="md"
         />
         <Stack
           align="left"
           justify="center"
           gap="xl"
-          w={{ base: "85%", sm: "70%" }}
-          my={marginY}
+          maw={maxWidth}
+          w="100%"
+          mt={headerHeight + 2 * marginY}
           mx="auto"
+          px={isMobile ? "xl" : 0}
         >
           <Banner />
           {SECTIONS_DATA.map(({ id, Component }) => (

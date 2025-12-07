@@ -12,8 +12,8 @@ function ColorSchemeToggle(actionIconProps: ActionIconProps) {
 
   return (
     <ActionIcon
-      variant="default"
-      size="35px"
+      variant="transparent"
+      c="white"
       aria-label="Toggle color scheme"
       onClick={() =>
         setColorScheme(computedColorScheme === "dark" ? "light" : "dark")

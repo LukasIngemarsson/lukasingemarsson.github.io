@@ -1,30 +1,36 @@
-import { Anchor, Paper, Stack, type PaperProps } from "@mantine/core";
+import { Anchor, Group, type GroupProps } from "@mantine/core";
 
 import { SECTIONS_DATA } from "../data/sections.data";
 
-type Props = PaperProps & { activeSection: string };
+type Props = GroupProps & { activeSection: string };
 
-function Navbar({ activeSection, ...paperProps }: Props) {
+function Navbar({ activeSection, ...groupProps }: Props) {
   return (
-    <Paper p="md" radius="md" w={120} withBorder {...paperProps}>
-      <Stack gap="xs">
-        {SECTIONS_DATA.map(({ id, title }) => {
-          const isActive = activeSection === id;
-          return (
-            <Anchor
-              key={id}
-              href={"#" + id}
-              size="md"
-              c="inherit"
-              td={isActive ? "underline" : ""}
-              fw={isActive ? 700 : 400}
-            >
-              {title}
-            </Anchor>
-          );
-        })}
-      </Stack>
-    </Paper>
+    <Group
+      px="xl"
+      w="100%"
+      gap="xl"
+      justify="space-between"
+      align="center"
+      {...groupProps}
+    >
+      {SECTIONS_DATA.map(({ id, title }) => {
+        const isActive = activeSection === id;
+        return (
+          <Anchor
+            key={id}
+            href={"#" + id}
+            size="md"
+            c="white"
+            td={isActive ? "underline" : ""}
+            fw={isActive ? 700 : 400}
+            style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}
+          >
+            {title}
+          </Anchor>
+        );
+      })}
+    </Group>
   );
 }
 

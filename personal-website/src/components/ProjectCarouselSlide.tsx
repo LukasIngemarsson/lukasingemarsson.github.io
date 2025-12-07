@@ -69,6 +69,7 @@ function ProjectCarouselSlide({
                 repoName={repo}
                 iconProps={{ size: 30 }}
                 w={maxButtonWidth}
+                style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
               />
             </Tabs.Panel>
           ))}

@@ -13,7 +13,7 @@ function Projects() {
 
   return (
     <Section title="Projects">
-      <Paper withBorder p={0}>
+      <Paper withBorder p={0} style={{ overflow: "hidden" }}>
         <Carousel
           height={isMobile ? 350 : isTablet ? 275 : 300}
           controlsOffset="xs"
