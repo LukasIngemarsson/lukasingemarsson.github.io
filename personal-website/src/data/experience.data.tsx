@@ -7,16 +7,8 @@ import {
 } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
 
-const arcticGamingDescription = (
+const arcticGamingExtra = (
   <TypographyStylesProvider>
-    <Text>
-      Competed internationally as a signed professional player in the strategy
-      game{" "}
-      <Anchor href="https://en.wikipedia.org/wiki/Clash_Royale" target="_blank">
-        Clash Royale
-      </Anchor>
-      , both individually and in a team environment. <br />
-    </Text>
     <Title order={4}>Most Significant Achievements</Title>
     <List icon={<IconChevronRight size={12} />} pl={0}>
       <List.Item>
@@ -86,6 +78,9 @@ export const EXPERIENCE_DATA = [
     role: "Professional Esports Player",
     organisation: "Arctic Gaming",
     date: "Nov 2018 – Aug 2019",
-    description: arcticGamingDescription,
+    description:
+      "Competed internationally as a signed professional player in the strategy \
+      game Clash Royale, both individually and in a team environment. ",
+    extra: arcticGamingExtra,
   },
 ];

@@ -14,7 +14,7 @@ function Contact() {
       <Title size="2.5rem">Get in Touch!</Title>
       <Group>
         <LinkIcon
-          tooltipLabel="Email Me"
+          tooltipLabel="Email"
           href="mailto:ingemarsson.lukas@gmail.com"
         >
           <IconMail size={iconSize} />

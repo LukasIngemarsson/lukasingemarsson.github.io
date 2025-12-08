@@ -1,25 +1,34 @@
-import { Timeline, Stack, Title, Text } from "@mantine/core";
-
-import type { ReactNode } from "react";
+import {
+  Timeline,
+  Stack,
+  Title,
+  Text,
+  Button,
+  Collapse,
+  Box,
+} from "@mantine/core";
+import { IconChevronUp, IconChevronDown } from "@tabler/icons-react";
+import { useState, type ReactNode } from "react";
 
 type Props = {
-  key: number;
   role: string;
   organisation: string;
   date: string;
-  description: string | ReactNode;
+  description: string;
+  extra?: ReactNode;
 };
 
 function ExperienceTimelineItem({
-  key,
   role,
   organisation,
   date,
   description,
+  extra,
 }: Props) {
+  const [opened, setOpened] = useState(false);
+
   return (
     <Timeline.Item
-      key={key}
       title={
         <Stack gap={0}>
           <Title order={3}>
@@ -34,10 +43,32 @@ function ExperienceTimelineItem({
         </Stack>
       }
     >
-      {typeof description === "string" ? (
-        <Text>{description}</Text>
-      ) : (
-        description
+      <Text style={{ textWrap: "pretty" }}>{description}</Text>
+      {extra && (
+        <>
+          <Button
+            variant="transparent"
+            size="sm"
+            mt="sm"
+            p={0}
+            h="auto"
+            rightSection={
+              opened ? (
+                <IconChevronUp size={14} />
+              ) : (
+                <IconChevronDown size={14} />
+              )
+            }
+            onClick={() => setOpened((o) => !o)}
+            c="dimmed"
+            fw={400}
+          >
+            {opened ? "Show less" : "Show more"}
+          </Button>
+          <Collapse in={opened}>
+            <Box mt="md">{extra}</Box>
+          </Collapse>
+        </>
       )}
     </Timeline.Item>
   );

@@ -1,28 +1,25 @@
-import { Accordion, Group, Stack, Text, Title } from "@mantine/core";
+import { Accordion, Group, Stack, Text, Title, type AccordionItemProps } from "@mantine/core";
 
 import type { ReactNode } from "react";
 
-type Props = {
-  value: string;
+type Props = AccordionItemProps & {
   university: string;
   program: string;
   date: string;
   children: ReactNode;
-  onClick?: () => void;
   comment?: string;
 };
 
 function EducationAccordionItem({
-  value,
   university,
   program,
   date,
   children,
-  onClick,
   comment,
+  ...accordionItemProps
 }: Props) {
   return (
-    <Accordion.Item value={value} onClick={onClick}>
+    <Accordion.Item {...accordionItemProps}>
       <Accordion.Control>
         <Group justify="space-between" pr="lg">
           <Stack gap="xs">

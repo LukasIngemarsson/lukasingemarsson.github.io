@@ -25,7 +25,6 @@ function Education() {
   const [openedParentAccordion, setOpenedParentAccordion] = useState<
     string | null
   >(null);
-  const exchangeRef = useRef<HTMLDivElement>(null);
   const exchangeCoursesRef = useRef<HTMLDivElement>(null);
 
   const allMscItemValues = MSC_SEMESTER_DATA.map((_, index) =>
@@ -38,7 +37,7 @@ function Education() {
     setMscOpenedItems([]);
     setOpenedParentAccordion("exchange");
     setTimeout(() => {
-      exchangeRef.current?.scrollIntoView({
+      document.getElementById("exchange-item")?.scrollIntoView({
         behavior: "smooth",
         block: "center",
       });
@@ -135,14 +134,13 @@ function Education() {
             {mscSemesterItems}
           </Accordion>
         </EducationAccordionItem>
-        <div ref={exchangeRef}>
-          <EducationAccordionItem
-            onClick={handleExchangeClick}
-            {...EXCHANGE_PROPS}
-          >
-            <Anchor onClick={redirectToExchangeCourses}>See courses</Anchor>
-          </EducationAccordionItem>
-        </div>
+        <EducationAccordionItem
+          id="exchange-item"
+          onClick={handleExchangeClick}
+          {...EXCHANGE_PROPS}
+        >
+          <Anchor onClick={redirectToExchangeCourses}>See courses</Anchor>
+        </EducationAccordionItem>
       </Accordion>
     </Section>
   );

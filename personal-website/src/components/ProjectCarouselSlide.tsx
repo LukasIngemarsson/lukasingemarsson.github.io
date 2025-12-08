@@ -20,14 +20,10 @@ function ProjectCarouselSlide({
   const [activeTab, setActiveTab] = useState<string | null>("0");
 
   const maxButtonWidth = 210;
+  const backgroundColor = isEven ? "var(--primary)" : "var(--secondary)";
 
   return (
-    <Carousel.Slide
-      key={title}
-      p="lg"
-      pos="relative"
-      bg={isEven ? "var(--primary)" : "var(--secondary)"}
-    >
+    <Carousel.Slide key={title} p="lg" pos="relative" bg={backgroundColor}>
       <Stack gap="xs">
         <Title order={2}>{title}</Title>
         <Text>{description}</Text>
@@ -50,7 +46,8 @@ function ProjectCarouselSlide({
           bottom={0}
           right={0}
           m="md"
-          variant="outline"
+          w={maxButtonWidth}
+          variant="default"
         >
           <Tabs.List>
             {repoNames.map((_, idx) => (

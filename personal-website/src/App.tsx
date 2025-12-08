@@ -22,6 +22,18 @@ const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
   primaryColor: "custom",
   colors: {
+    dark: [
+      "#e3e4e8",
+      "#cdd0d6",
+      "#adb1bd",
+      "#8d92a3",
+      "#6d748a",
+      "#4d5366",
+      "#373b4a",
+      "#1A1B23",
+      "#13141a",
+      "#0a0a0d",
+    ],
     custom: [
       "#edf0fd",
       "#d7dcf4",
@@ -94,7 +106,7 @@ function App() {
     <>
       <style>
         {`
-          html { scroll-behavior: smooth; }         
+          html { scroll-behavior: smooth; }
           .mantine-List-itemWrapper {
             align-items: flex-start !important;
           }
