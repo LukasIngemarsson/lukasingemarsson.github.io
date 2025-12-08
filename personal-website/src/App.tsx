@@ -77,11 +77,21 @@ function App() {
     SECTIONS_DATA.map(({ id }) => [id, useRef<HTMLDivElement>(null)])
   );
 
+  const scrollToSection = (id: string) => {
+    const headerHeight = 90;
+    const ref = sectionRefs[id]?.current;
+    if (ref) {
+      const y = ref.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const fromTop = window.scrollY + 150;
 
       let currSection = SECTIONS_DATA[0].id;
+
       for (const section of SECTIONS_DATA) {
         const elem = sectionRefs[section.id].current;
         if (elem && elem.offsetTop <= fromTop) {
@@ -155,6 +165,7 @@ function App() {
         />
         <Header
           activeSection={activeSection}
+          onSectionClick={scrollToSection}
           pos="fixed"
           top={marginY}
           left={0}

@@ -2,9 +2,9 @@ import { Anchor, Group, type GroupProps } from "@mantine/core";
 
 import { SECTIONS_DATA } from "../data/sections.data";
 
-type Props = GroupProps & { activeSection: string };
+type Props = GroupProps & { activeSection: string; onSectionClick?: (id: string) => void; };
 
-function Navbar({ activeSection, ...groupProps }: Props) {
+function Navbar({ activeSection, onSectionClick, ...groupProps }: Props) {
   return (
     <Group
       px="xl"
@@ -23,7 +23,12 @@ function Navbar({ activeSection, ...groupProps }: Props) {
             c="white"
             td={isActive ? "underline" : ""}
             fw={isActive ? 550 : 400}
-            style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}
+            onClick={e => {
+              if (onSectionClick) {
+                e.preventDefault();
+                onSectionClick(id);
+              }
+            }}
           >
             {title}
           </Anchor>

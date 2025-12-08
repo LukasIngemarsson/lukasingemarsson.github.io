@@ -7,15 +7,17 @@ import BlurredBackground from "./BlurredBackground";
 
 type Props = BoxProps & {
   activeSection: string;
+  onSectionClick?: (id: string) => void;
 };
 
-function Header({ activeSection, h, ...containerProps }: Props) {
+function Header({ activeSection, onSectionClick, h, ...containerProps }: Props) {
   return (
     <Paper style={{ overflow: "hidden" }} withBorder {...containerProps}>
       <BlurredBackground src={banner} h={h}>
         <Group gap="md" wrap="nowrap" pos="relative" h={h}>
           <Navbar
             activeSection={activeSection}
+            onSectionClick={onSectionClick}
             style={{ flex: 1, height: "100%" }}
           />
           <ColorSchemeToggle h={h} w={h} />
