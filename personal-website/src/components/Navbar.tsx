@@ -8,7 +8,6 @@ function Navbar({ activeSection, ...groupProps }: Props) {
   return (
     <Group
       px="xl"
-      w="100%"
       gap="xl"
       justify="space-between"
       align="center"
@@ -23,7 +22,7 @@ function Navbar({ activeSection, ...groupProps }: Props) {
             size="md"
             c="white"
             td={isActive ? "underline" : ""}
-            fw={isActive ? 700 : 400}
+            fw={isActive ? 550 : 400}
             style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}
           >
             {title}

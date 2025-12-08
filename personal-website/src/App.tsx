@@ -35,11 +35,11 @@ const theme = createTheme({
       "#0f2174",
     ],
   },
-  defaultRadius: "sm",
+  defaultRadius: "md",
   components: {
     BackgroundImage: {
       defaultProps: {
-        radius: "sm",
+        radius: "md",
       },
     },
   },

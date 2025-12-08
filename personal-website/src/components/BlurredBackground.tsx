@@ -22,7 +22,7 @@ function BlurredBackground({
       style={{
         ...style,
         overflow: "hidden",
-        borderRadius: "var(--mantine-radius-sm)",
+        borderRadius: "var(--mantine-radius-md)",
       }}
       {...boxProps}
     >
