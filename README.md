@@ -1,3 +1,3 @@
 # lukasingemarsson.github.io
 
-A minimalistic personal website. Built with React and Mantine.
+A minimalistic personal website, built with React and Mantine.
