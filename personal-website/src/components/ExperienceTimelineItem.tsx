@@ -63,7 +63,7 @@ function ExperienceTimelineItem({
             c="dimmed"
             fw={400}
           >
-            {opened ? "Show less" : "Show more"}
+            {opened ? "See less" : "See more"}
           </Button>
           <Collapse in={opened}>
             <Box mt="md">{extra}</Box>

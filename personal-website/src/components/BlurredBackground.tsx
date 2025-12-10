@@ -12,7 +12,7 @@ function BlurredBackground({
   src,
   children,
   style,
-  blur = 3,
+  blur = 8,
   overlay = "rgba(0,0,0,0.5)",
   ...boxProps
 }: Props) {

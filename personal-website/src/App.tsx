@@ -72,6 +72,7 @@ const cssVariablesResolver: CSSVariablesResolver = (theme) => ({
 function App() {
   const [activeSection, setActiveSection] = useState(SECTIONS_DATA[0].id);
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const isTabletOrBelow = useMediaQuery("(max-width: 992px)");
 
   const sectionRefs = Object.fromEntries(
     SECTIONS_DATA.map(({ id }) => [id, useRef<HTMLDivElement>(null)])
@@ -161,7 +162,7 @@ function App() {
           h={marginY + headerHeight}
           bg="var(--mantine-color-body)"
           style={{ zIndex: 999 }}
-          visibleFrom="lg"
+          visibleFrom="md"
         />
         <Header
           activeSection={activeSection}
@@ -182,9 +183,9 @@ function App() {
           gap="xl"
           maw={maxWidth}
           w="100%"
-          mt={headerHeight + 2 * marginY}
+          mt={isTabletOrBelow ? marginY : headerHeight + 2 * marginY}
           mx="auto"
-          px={isMobile ? "xl" : 0}
+          px={isTabletOrBelow ? "xl" : 0}
         >
           <Banner />
           {SECTIONS_DATA.map(({ id, Component }) => (
