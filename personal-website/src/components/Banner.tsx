@@ -25,11 +25,11 @@ function Banner() {
           py={isMobile ? 0 : "md"}
         >
           <Image radius="50%" src={portrait} h={140} w={140} visibleFrom="sm" />
-          <Stack gap={3} p="md" ta="left">
+          <Stack gap={3} p={isMobile ? "md" : 0} ta="left">
             <Title c="white" size={isMobile ? "3rem" : "3.5rem"}>
               {!isMobile && "Hello, "}I'm Lukas
             </Title>
-            <Text c="white" size="xl">
+            <Text c="white" size="xl" style={{ textWrap: "pretty" }}>
               Final-Year M.Sc. Student in AI/ML @ Linköping University
             </Text>
           </Stack>

@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 type Props = ActionIconProps & { href: string; children: ReactNode };
 
 function SocialIcon({ href, children, ...actionIconProps }: Props) {
-  const { variant = "outline", ...restActionIconProps } = actionIconProps;
+  const { variant = "light", ...restActionIconProps } = actionIconProps;
 
   return (
     <ActionIcon
