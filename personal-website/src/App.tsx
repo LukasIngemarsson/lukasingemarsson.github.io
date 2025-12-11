@@ -71,8 +71,8 @@ const cssVariablesResolver: CSSVariablesResolver = (theme) => ({
 
 function App() {
   const [activeSection, setActiveSection] = useState(SECTIONS_DATA[0].id);
-  const isMobile = useMediaQuery("(max-width: 768px)");
-  const isTabletOrBelow = useMediaQuery("(max-width: 992px)");
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isTabletOrBelow = useMediaQuery("(max-width: 991px)");
 
   const sectionRefs = Object.fromEntries(
     SECTIONS_DATA.map(({ id }) => [id, useRef<HTMLDivElement>(null)])

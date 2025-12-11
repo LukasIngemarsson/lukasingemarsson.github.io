@@ -6,7 +6,7 @@ import Section from "../components/Section";
 import { WHOAMI_DATA } from "../data/whoami.data";
 
 function WhoAmI() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   return (
     <Section title="Who Am I?">

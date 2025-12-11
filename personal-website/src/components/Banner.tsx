@@ -8,7 +8,7 @@ import GitHubIcon from "./GitHubIcon";
 import LinkedInIcon from "./LinkedInIcon.tsx";
 
 function Banner() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   return (
     <Paper style={{ overflow: "hidden" }} withBorder>
