@@ -10,7 +10,7 @@ function WhoAmI() {
 
   return (
     <Section title="Who Am I?">
-      <List icon={<IconChevronRight size={12} />} size={isMobile ? "md" : "lg"}>
+      <List icon={<IconChevronRight size={12} />} size={isMobile ? "md" : "lg"} style={{ textWrap: "pretty" }}>
         {WHOAMI_DATA.map((text, index) => (
           <List.Item key={index}>{text}</List.Item>
         ))}

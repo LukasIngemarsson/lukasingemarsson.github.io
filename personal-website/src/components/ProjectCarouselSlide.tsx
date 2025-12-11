@@ -26,7 +26,7 @@ function ProjectCarouselSlide({
     <Carousel.Slide key={title} p="lg" pos="relative" bg={backgroundColor}>
       <Stack gap="xs">
         <Title order={2}>{title}</Title>
-        <Text>{description}</Text>
+        <Text style={{ textWrap: "pretty" }}>{description}</Text>
       </Stack>
       {repoNames.length === 1 ? (
         <GitHubRepoButton
