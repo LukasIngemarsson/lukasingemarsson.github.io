@@ -83,3 +83,5 @@ export const MSC_SEMESTER_DATA = [
   ],
   [{ code: "TQXX33", name: "Degree project - Master's Thesis" }],
 ];
+
+export const GPA = "5.0/5.0";

@@ -17,6 +17,7 @@ import {
   MSC_SEMESTER_TITLES,
   MSC_SEMESTER_DATA,
   EXCHANGE_PROPS,
+  GPA,
 } from "../data/education.data";
 
 function Education() {
@@ -115,7 +116,7 @@ function Education() {
               onMouseEnter={() => setShowGpa(true)}
               onMouseLeave={() => setShowGpa(false)}
             >
-              {showGpa ? "5.0/5.0" : "GPA"}
+              {showGpa ? GPA : "GPA"}
             </Paper>
             <Button
               onClick={(event) => {

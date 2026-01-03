@@ -1,13 +1,13 @@
 import Education from "../sections/Education";
 import Experience from "../sections/Experience";
-import WhoAmI from "../sections/WhoAmI";
+import AboutMe from "../sections/AboutMe";
 import Projects from "../sections/Projects";
 
 export const SECTIONS_DATA = [
   {
-    id: "whoami",
-    title: "Who Am I?",
-    Component: WhoAmI,
+    id: "aboutme",
+    title: "About Me",
+    Component: AboutMe,
   },
   {
     id: "education",

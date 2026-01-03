@@ -1,0 +1,3 @@
+export const ABOUT_ME_DATA = `
+Hi! I am Lukas, a final-year AI/ML student based in Linköping and Stockholm, Sweden. I was born in Connecticut, USA, but grew up in Sweden from the age of six. I have always loved solving problems, especially challenging ones. At one point I competed internationally at a professional level in the popular strategy game Clash Royale. In recent years, during my studies, I developed an interest in algorithmic coding problems, solving close to 300 problems on platforms like Kattis and UVa Online Judge. Apart from my problem-solving interests, I am a big sports enthusiast, particularly a fan of ice hockey, tennis, and the lesser-known winter sport bandy.
+`

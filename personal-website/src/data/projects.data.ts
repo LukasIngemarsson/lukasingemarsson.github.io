@@ -1,18 +1,18 @@
 export const PROJECTS_DATA = [
   {
+    title: "Algorithmic Problem Solving",
+    description:
+      "Solutions to algorithmic coding problems that I have solved, mainly on Kattis \
+      and UVa Online Judge, as well as a library containing my implementations of competitive \
+      programming algorithms.",
+    repoNames: ["kattis", "uva-online-judge", "algo-lib"],
+  },
+  {
     title: "Venom",
     description:
       "A lightweight data-collection framework for identifying and quantifying illicit \
       Bitcoin activity on Dark Web marketplaces.",
     repoNames: ["venom"],
-  },
-  {
-    title: "Algorithmic Problem Solving",
-    description:
-      "Solutions to algorithmic coding problems that I have solved recreationally, mainly on Kattis \
-      and UVa Online Judge, as well as a library containing my implementations of competitive \
-      programming algorithms.",
-    repoNames: ["kattis", "uva-online-judge", "algo-lib"],
   },
   {
     title: "CLIP PubMedVision",
@@ -24,7 +24,7 @@ export const PROJECTS_DATA = [
   {
     title: "Musicle",
     description:
-      "A social music app notably featuring a multiplayer music quiz that takes each \
+      "A social music app, notably featuring a multiplayer music quiz that takes each \
       participant's Spotify listening habits into account, and a multiplayer queue session with a \
       fair rank-voting system.",
     repoNames: ["musicle"],
@@ -32,8 +32,7 @@ export const PROJECTS_DATA = [
   {
     title: "Personal Website",
     description:
-      "A minimalistic personal website which you are looking \
-      at now!",
+      "A minimalistic personal website.",
     repoNames: ["lukasingemarsson.github.io"],
   },
 ];
