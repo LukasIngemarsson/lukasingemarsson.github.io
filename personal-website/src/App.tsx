@@ -19,7 +19,10 @@ import { useMediaQuery } from "@mantine/hooks";
 import Header from "./components/Header";
 
 const theme = createTheme({
-  fontFamily: "Open Sans, sans-serif",
+  fontFamily: "Inter, sans-serif",
+  headings: {
+    fontFamily: "'Space Grotesk', sans-serif",
+  },
   primaryColor: "custom",
   colors: {
     dark: [
