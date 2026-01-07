@@ -9,21 +9,21 @@ import { PROJECTS_DATA } from "../data/projects.data";
 
 function Projects() {
   const theme = useMantineTheme();
-  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-  const isTablet = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
+  const isSmallMobile = useMediaQuery("(max-width: 590px)");
+  const isMobileOrTablet = useMediaQuery(`(max-width: ${theme.breakpoints.md})`);
 
   return (
     <Section title="Projects">
       <Paper withBorder p={0} style={{ overflow: "hidden" }}>
         <Carousel
-          height={isMobile ? 350 : isTablet ? 275 : 300}
+          height={isSmallMobile ? 350 : isMobileOrTablet ? 275 : 300}
           controlsOffset="xs"
-          slideSize={isMobile ? "100%" : isTablet ? "75%" : "50%"}
+          slideSize={isSmallMobile ? "100%" : isMobileOrTablet ? "75%" : "50%"}
           controlSize={30}
           nextControlIcon={<IconArrowRight size={24} />}
           previousControlIcon={<IconArrowLeft size={24} />}
-          withControls={!isMobile}
-          withIndicators={isTablet}
+          withControls={!isSmallMobile && !isMobileOrTablet}
+          withIndicators={isSmallMobile || isMobileOrTablet}
         >
           {PROJECTS_DATA.map((slide, idx) => (
             <ProjectCarouselSlide
