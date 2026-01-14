@@ -8,6 +8,12 @@ export const PROJECTS_DATA = [
     repoNames: ["kattis", "uva-online-judge", "algo-lib"],
   },
   {
+    title: "WhoSays",
+    description:
+      "A real-time pipeline for multi-speaker diarization and transcription that answers three practical questions: who spoke, when, and what did they say?",
+    repoNames: ["who-says"],
+  },
+  {
     title: "Venom",
     description:
       "A lightweight data-collection framework for identifying and quantifying illicit \
