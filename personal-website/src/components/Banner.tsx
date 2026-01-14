@@ -9,14 +9,16 @@ import LinkedInIcon from "./LinkedInIcon.tsx";
 
 function Banner() {
   const isMobile = useMediaQuery("(max-width: 767px)");
-  const iconColor = "rgba(255, 255, 255, 0.75)";
+  const iconColor = "rgba(255, 255, 255, 0.8)";
+  const iconSize = 25;
+  const iconPad = 8;
 
   return (
     <Paper style={{ overflow: "hidden" }} withBorder>
       <BlurredBackground src={banner}>
         <Group pos="absolute" top={10} right={10} gap={10} visibleFrom="md">
-          <LinkedInIcon c={iconColor} style={{ borderColor: iconColor }}></LinkedInIcon>
-          <GitHubIcon c={iconColor} style={{ borderColor: iconColor }}></GitHubIcon>
+          <LinkedInIcon c={iconColor} iconProps={{ size: iconSize }} size={iconSize + iconPad} style={{ borderColor: iconColor }}></LinkedInIcon>
+          <GitHubIcon c={iconColor} iconProps={{ size: iconSize }} size={iconSize + iconPad} style={{ borderColor: iconColor }}></GitHubIcon>
         </Group>
         <Flex
           direction="row"
