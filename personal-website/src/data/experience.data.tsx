@@ -43,6 +43,13 @@ const arcticGamingExtra = (
 
 export const EXPERIENCE_DATA = [
   {
+    role: "Master Thesis Student",
+    organisation: "Fortnox",
+    date: "Jan 2026 – May 2026",
+    description:
+      "Topic: Graph Neural Networks for Financial Crime Detection.",
+  },
+  {
     role: "Autonomous Systems Summer Substitute",
     organisation: "TRATON",
     date: "Jun 2025 – Aug 2025",
