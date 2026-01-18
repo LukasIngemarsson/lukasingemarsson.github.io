@@ -13,7 +13,7 @@ function BlurredBackground({
   children,
   style,
   blur = 8,
-  overlay = "rgba(0,0,0,0.5)",
+  overlay = "rgba(0,0,0,0.55)",
   ...boxProps
 }: Props) {
   return (
@@ -22,16 +22,13 @@ function BlurredBackground({
       style={{
         ...style,
         overflow: "hidden",
-        borderRadius: "var(--mantine-radius-md)",
+        borderRadius: "inherit",
       }}
       {...boxProps}
     >
       <Box
         pos="absolute"
-        top={-5}
-        left={-5}
-        right={-5}
-        bottom={-5}
+        inset={-5}
         style={{
           backgroundImage: `url(${src})`,
           backgroundSize: "cover",
@@ -41,7 +38,17 @@ function BlurredBackground({
       />
       <Box pos="absolute" top={0} left={0} right={0} bottom={0} bg={overlay} />
       <Box pos="relative">{children}</Box>
-    </Box>
+      <Box
+        pos="absolute"
+        inset={0}
+        style={{
+          borderRadius: "inherit",
+          border: "1px solid var(--mantine-color-default-border)",
+          pointerEvents: "none",
+          zIndex: 2
+        }}
+      />
+    </Box >
   );
 }
 

@@ -14,8 +14,10 @@ function Banner() {
   const iconPad = 8;
 
   return (
-    <Paper style={{ overflow: "hidden" }} withBorder>
-      <BlurredBackground src={banner}>
+    <Paper style={{ overflow: "hidden" }}>
+      <BlurredBackground src={banner} style={{
+        transform: "translateZ(0)"
+      }}>
         <Group pos="absolute" top={10} right={10} gap={10} visibleFrom="md">
           <LinkedInIcon c={iconColor} iconProps={{ size: iconSize }} size={iconSize + iconPad} style={{ borderColor: iconColor }}></LinkedInIcon>
           <GitHubIcon c={iconColor} iconProps={{ size: iconSize }} size={iconSize + iconPad} style={{ borderColor: iconColor }}></GitHubIcon>

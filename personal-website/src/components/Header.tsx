@@ -12,7 +12,7 @@ type Props = BoxProps & {
 
 function Header({ activeSection, onSectionClick, h, ...containerProps }: Props) {
   return (
-    <Paper style={{ overflow: "hidden" }} withBorder {...containerProps}>
+    <Paper {...containerProps}>
       <BlurredBackground src={banner} h={h}>
         <Group gap="md" wrap="nowrap" pos="relative" h={h}>
           <Navbar
