@@ -2,7 +2,7 @@ export const PROJECTS_DATA = [
   {
     title: "Algorithmic Problem Solving",
     description:
-      "My solutions to almost 300 algorithmic coding problems on Kattis \
+      "My solutions to around 300 algorithmic coding problems on Kattis \
       and UVa Online Judge, as well as a library containing my implementations of competitive \
       programming algorithms.",
     repoNames: ["kattis", "uva-online-judge", "algo-lib"],
