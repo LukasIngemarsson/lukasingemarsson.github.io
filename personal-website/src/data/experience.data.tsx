@@ -43,7 +43,7 @@ const arcticGamingExtra = (
 
 export const EXPERIENCE_DATA = [
   {
-    role: "Master Thesis Student",
+    role: "Master's Thesis Student",
     organisation: "Fortnox",
     date: "Jan 2026 – May 2026",
     description:
