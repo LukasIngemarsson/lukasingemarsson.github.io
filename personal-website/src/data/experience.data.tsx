@@ -54,24 +54,29 @@ export const EXPERIENCE_DATA = [
     organisation: "TRATON",
     date: "Jun 2025 – Aug 2025",
     description:
-      "Developed an end-to-end generative pipeline using LLMs to synthesize \
-      multi-vehicle crash simulations from sparse image-text input data.",
+      `Developed an end-to-end generative pipeline using LLMs to synthesize
+      multi-vehicle crash simulations from sparse image-text input data. Owned the 
+      full project lifecycle: setting up a systematic plan, iteratively developing
+      the pipeline, and finally packaging the tool for future use in the organization.`,
   },
   {
     role: "Autonomous Systems Summer Substitute",
     organisation: "Scania",
     date: "Jun 2024 – Aug 2024",
     description:
-      "Evaluated and improved ML-based lane detection models for offline perception \
-      in autonomous vehicles.",
+      `Benchmarked and refined ML-based lane detection models for offline perception
+      in autonomous vehicles. Became comfortable researching, testing, and tuning ML
+      models, as well as developing supporting algorithms to maximize performance.`
   },
   {
     role: "Autonomous Systems Summer Intern",
     organisation: "Scania",
     date: "Jun 2023 – Aug 2023",
     description:
-      "Completed a 3-stage project surrounding the V&V, segmentation, and \
-      application of in-house autonomous vehicle data.",
+      `Transformed raw autonomous vehicle logs into a clean, extensive dataset of
+      risk-assessed driving maneuvers to support safety validation. Acquired practical
+      experience with data science techniques related to time series analysis,
+      dimensionality reduction, and clustering.`,
   },
   {
     role: "Teaching Assistant",
