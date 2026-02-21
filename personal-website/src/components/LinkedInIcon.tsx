@@ -5,7 +5,7 @@ import SocialIcon from "./SocialIcon";
 type Props = ActionIconProps & { iconProps?: IconProps };
 
 function LinkedInIcon({ iconProps, ...actionIconProps }: Props) {
-  const { size = 20, stroke = 1.5, ...restIconProps } = iconProps || {};
+  const { size = 26, stroke = 1.5, ...restIconProps } = iconProps || {};
 
   return (
     <SocialIcon
