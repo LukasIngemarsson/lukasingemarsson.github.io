@@ -29,7 +29,7 @@ function Education() {
   const exchangeCoursesRef = useRef<HTMLDivElement>(null);
 
   const allMscItemValues = MSC_SEMESTER_DATA.map((_, index) =>
-    String(index + 1)
+    String(index + 1),
   );
   const allMscItemsOpened = mscOpenedItems.length === allMscItemValues.length;
 
@@ -104,7 +104,6 @@ function Education() {
           <Group justify="space-between" pb="10px">
             <Paper
               withBorder
-              shadow="xs"
               p="xs"
               display="inline-block"
               w="90px"
