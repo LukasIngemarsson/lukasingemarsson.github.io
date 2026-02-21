@@ -43,12 +43,13 @@ function BlurredBackground({
         inset={0}
         style={{
           borderRadius: "inherit",
-          border: "1px solid var(--mantine-color-default-border)",
+          border:
+            "var(--mantine-border-width) solid var(--mantine-color-default-border)",
           pointerEvents: "none",
-          zIndex: 2
+          zIndex: 2,
         }}
       />
-    </Box >
+    </Box>
   );
 }
 

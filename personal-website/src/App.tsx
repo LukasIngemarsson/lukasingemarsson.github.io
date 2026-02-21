@@ -57,11 +57,17 @@ const theme = createTheme({
         radius: "md",
       },
     },
+    Paper: {
+      styles: { root: { borderWidth: "var(--mantine-border-width)" } },
+    },
+    Accordion: {
+      styles: { item: { borderWidth: "var(--mantine-border-width)" } },
+    },
   },
 });
 
 const cssVariablesResolver: CSSVariablesResolver = (theme) => ({
-  variables: {},
+  variables: { "--mantine-border-width": "1.5px" },
   light: {
     "--primary": "white",
     "--secondary": theme.colors.gray[1],
@@ -78,7 +84,7 @@ function App() {
   const isTabletOrBelow = useMediaQuery("(max-width: 991px)");
 
   const sectionRefs = Object.fromEntries(
-    SECTIONS_DATA.map(({ id }) => [id, useRef<HTMLDivElement>(null)])
+    SECTIONS_DATA.map(({ id }) => [id, useRef<HTMLDivElement>(null)]),
   );
 
   const scrollToSection = (id: string) => {
