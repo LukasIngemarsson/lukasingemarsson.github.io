@@ -11,7 +11,7 @@ function Banner() {
   const isMobile = useMediaQuery("(max-width: 767px)");
 
   return (
-    <Paper style={{ overflow: "hidden" }}>
+    <Paper withBorder style={{ overflow: "hidden" }}>
       <BlurredBackground
         src={banner}
         style={{

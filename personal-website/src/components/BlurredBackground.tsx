@@ -38,17 +38,6 @@ function BlurredBackground({
       />
       <Box pos="absolute" top={0} left={0} right={0} bottom={0} bg={overlay} />
       <Box pos="relative">{children}</Box>
-      <Box
-        pos="absolute"
-        inset={0}
-        style={{
-          borderRadius: "inherit",
-          border:
-            "var(--mantine-border-width) solid var(--mantine-color-default-border)",
-          pointerEvents: "none",
-          zIndex: 2,
-        }}
-      />
     </Box>
   );
 }

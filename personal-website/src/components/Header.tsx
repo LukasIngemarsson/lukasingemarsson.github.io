@@ -10,9 +10,18 @@ type Props = BoxProps & {
   onSectionClick?: (id: string) => void;
 };
 
-function Header({ activeSection, onSectionClick, h, ...containerProps }: Props) {
+function Header({
+  activeSection,
+  onSectionClick,
+  h,
+  ...containerProps
+}: Props) {
   return (
-    <Paper {...containerProps}>
+    <Paper
+      {...containerProps}
+      withBorder
+      styles={{ root: { overflow: "hidden" } }}
+    >
       <BlurredBackground src={banner} h={h}>
         <Group gap="md" wrap="nowrap" pos="relative" h={h}>
           <Navbar
