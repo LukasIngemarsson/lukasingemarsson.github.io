@@ -2,7 +2,7 @@ import { Group, Paper, Stack, Title, Image, Text, Flex } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 import banner from "../assets/banner.jpeg";
-import portrait from "../assets/portrait.jpeg";
+import portrait from "../assets/portrait.png";
 import BlurredBackground from "./BlurredBackground";
 import GitHubIcon from "./GitHubIcon";
 import LinkedInIcon from "./LinkedInIcon.tsx";
@@ -29,12 +29,22 @@ function Banner() {
           px={isMobile ? 0 : "xl"}
           py={isMobile ? 0 : "md"}
         >
-          <Image radius="50%" src={portrait} h={140} w={140} visibleFrom="sm" />
+          <Image
+            radius="50%"
+            src={portrait}
+            h={140}
+            w={140}
+            visibleFrom="sm"
+            style={{
+              border:
+                "var(--mantine-border-width) solid var(--mantine-color-default-border)",
+            }}
+          />
           <Stack gap={3} p={isMobile ? "md" : 0} ta="left">
             <Title c="white" size={isMobile ? "3rem" : "3.5rem"}>
               {!isMobile && "Hello, "}I'm Lukas
             </Title>
-            <Text c="white" size="xl" style={{ textWrap: "pretty" }}>
+            <Text c="white" size="xl" fw={500} style={{ textWrap: "pretty" }}>
               Final-Year M.Sc. Student in AI/ML @ Linköping University
             </Text>
           </Stack>
