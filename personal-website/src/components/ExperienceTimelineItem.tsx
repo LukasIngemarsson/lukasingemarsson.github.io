@@ -6,13 +6,19 @@ import {
   Button,
   Collapse,
   Box,
+  Anchor,
 } from "@mantine/core";
-import { IconChevronUp, IconChevronDown } from "@tabler/icons-react";
+import {
+  IconChevronUp,
+  IconChevronDown,
+  IconExternalLink,
+} from "@tabler/icons-react";
 import { useState, type ReactNode } from "react";
 
 type Props = {
   role: string;
   organisation: string;
+  organisationUrl?: string;
   date: string;
   description: string;
   extra?: ReactNode;
@@ -21,6 +27,7 @@ type Props = {
 function ExperienceTimelineItem({
   role,
   organisation,
+  organisationUrl,
   date,
   description,
   extra,
@@ -33,9 +40,26 @@ function ExperienceTimelineItem({
         <Stack gap={0}>
           <Title order={3}>
             {role + " "}
-            <Text c="dimmed" span inherit>
-              {"@ " + organisation}
-            </Text>
+            {organisationUrl ? (
+              <Anchor
+                href={organisationUrl}
+                target="_blank"
+                rel="noreferrer"
+                c="dimmed"
+                underline="hover"
+                inherit
+              >
+                {"@ " + organisation + " "}
+                <IconExternalLink
+                  size={14}
+                  style={{ verticalAlign: "middle" }}
+                />
+              </Anchor>
+            ) : (
+              <Text c="dimmed" span inherit>
+                {"@ " + organisation}
+              </Text>
+            )}
           </Title>
           <Text fs="italic" c="dimmed" size="lg">
             {date}

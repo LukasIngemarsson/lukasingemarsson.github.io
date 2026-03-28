@@ -2,7 +2,7 @@ import { Group, Paper, Stack, Title, Image, Text, Flex } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 import banner from "../assets/banner.jpeg";
-import portrait from "../assets/portrait.png";
+import portrait from "../assets/portrait.webp";
 import BlurredBackground from "./BlurredBackground";
 import GitHubIcon from "./GitHubIcon";
 import LinkedInIcon from "./LinkedInIcon.tsx";
@@ -32,6 +32,7 @@ function Banner() {
           <Image
             radius="50%"
             src={portrait}
+            alt="Portrait of Lukas Ingemarsson"
             h={140}
             w={140}
             visibleFrom="sm"

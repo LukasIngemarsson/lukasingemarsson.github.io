@@ -15,6 +15,7 @@ function LinkIcon({ tooltipLabel, href, children }: Props) {
         component="a"
         href={href}
         target="_blank"
+        rel="noreferrer"
         size="xl"
         variant="outline"
       >

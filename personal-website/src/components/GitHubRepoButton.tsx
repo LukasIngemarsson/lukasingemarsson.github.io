@@ -22,6 +22,7 @@ function GitHubRepoButton({ iconProps, repoName, ...buttonProps }: Props) {
       component="a"
       href={`https://github.com/LukasIngemarsson/${repoName}`}
       target="_blank"
+      rel="noreferrer"
       variant="light"
       rightSection={
         <IconBrandGithub size={iconSize} stroke={stroke} {...restIconProps} />

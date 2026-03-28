@@ -17,6 +17,7 @@ const arcticGamingExtra = (
         <Anchor
           href="https://www.redbull.com/se-en/meo-sweden-2018"
           target="_blank"
+          rel="noreferrer"
         >
           Red Bull Interview
         </Anchor>
@@ -45,6 +46,7 @@ export const EXPERIENCE_DATA = [
   {
     role: "Master's Thesis Student",
     organisation: "Fortnox",
+    organisationUrl: "https://www.fortnox.se",
     date: "Jan 2026 – May 2026",
     description:
       "Topic: Graph Neural Networks for Financial Crime Detection.",
@@ -52,6 +54,7 @@ export const EXPERIENCE_DATA = [
   {
     role: "Autonomous Systems Summer Substitute",
     organisation: "TRATON",
+    organisationUrl: "https://traton.com",
     date: "Jun 2025 – Aug 2025",
     description:
       `Developed an end-to-end generative pipeline using LLMs to synthesize
@@ -62,6 +65,7 @@ export const EXPERIENCE_DATA = [
   {
     role: "Autonomous Systems Summer Substitute",
     organisation: "Scania",
+    organisationUrl: "https://www.scania.com",
     date: "Jun 2024 – Aug 2024",
     description:
       `Benchmarked and refined ML-based lane detection models for offline perception
@@ -71,6 +75,7 @@ export const EXPERIENCE_DATA = [
   {
     role: "Autonomous Systems Summer Intern",
     organisation: "Scania",
+    organisationUrl: "https://www.scania.com",
     date: "Jun 2023 – Aug 2023",
     description:
       `Transformed raw autonomous vehicle logs into a clean, extensive dataset of
@@ -81,6 +86,7 @@ export const EXPERIENCE_DATA = [
   {
     role: "Teaching Assistant",
     organisation: "Linköping University",
+    organisationUrl: "https://liu.se/en",
     date: "Jan 2023 – May 2023",
     description:
       "Mentored a cohort of first-year IT students, offering guidance in \

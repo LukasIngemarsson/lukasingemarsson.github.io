@@ -15,6 +15,7 @@ function SocialIcon({ href, children, ...actionIconProps }: Props) {
       component="a"
       href={href}
       target="_blank"
+      rel="noreferrer"
       {...restActionIconProps}
     >
       {children}
