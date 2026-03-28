@@ -40,26 +40,32 @@ function ExperienceTimelineItem({
         <Stack gap={0}>
           <Title order={3}>
             {role + " "}
-            {organisationUrl ? (
-              <Anchor
-                href={organisationUrl}
-                target="_blank"
-                rel="noreferrer"
-                c="dimmed"
-                underline="hover"
-                inherit
-              >
-                {"@ " + organisation + " "}
+            <Text c="dimmed" span inherit>
+              {"@ "}
+              {organisationUrl ? (
+                <Anchor
+                  href={organisationUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  c="dimmed"
+                  underline="hover"
+                  inherit
+                >
+                  {organisation}
+                </Anchor>
+              ) : (
+                organisation
+              )}
+              {organisationUrl && (
                 <IconExternalLink
                   size={14}
-                  style={{ verticalAlign: "middle" }}
+                  style={{
+                    verticalAlign: "middle",
+                    marginLeft: 4,
+                  }}
                 />
-              </Anchor>
-            ) : (
-              <Text c="dimmed" span inherit>
-                {"@ " + organisation}
-              </Text>
-            )}
+              )}
+            </Text>
           </Title>
           <Text fs="italic" c="dimmed" size="lg">
             {date}
