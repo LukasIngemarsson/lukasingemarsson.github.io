@@ -52,18 +52,18 @@ function ExperienceTimelineItem({
                   inherit
                 >
                   {organisation}
+                  <IconExternalLink
+                    size={14}
+                    style={{
+                      verticalAlign: "middle",
+                      marginLeft: 4,
+                      textDecoration: "none",
+                      display: "inline-block",
+                    }}
+                  />
                 </Anchor>
               ) : (
                 organisation
-              )}
-              {organisationUrl && (
-                <IconExternalLink
-                  size={14}
-                  style={{
-                    verticalAlign: "middle",
-                    marginLeft: 4,
-                  }}
-                />
               )}
             </Text>
           </Title>
