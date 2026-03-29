@@ -37,8 +37,7 @@ function Banner() {
             w={140}
             visibleFrom="sm"
             style={{
-              border:
-                "var(--mantine-border-width) solid var(--mantine-color-default-border)",
+              boxShadow: "0 0 0 var(--mantine-border-width) var(--mantine-color-default-border)",
             }}
           />
           <Stack gap={3} p={isMobile ? "md" : 0} ta="left">
