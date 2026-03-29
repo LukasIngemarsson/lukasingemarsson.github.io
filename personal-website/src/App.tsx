@@ -13,6 +13,7 @@ import {
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 import Contact from "./components/Contact";
+import AnimatedBackground from "./components/AnimatedBackground";
 
 import { SECTIONS_DATA } from "./data/sections.data";
 import { useMediaQuery } from "@mantine/hooks";
@@ -33,9 +34,9 @@ const theme = createTheme({
       "#6d748a",
       "#4d5366",
       "#373b4a",
-      "#1A1B23",
-      "#13141a",
-      "#0a0a0d",
+      "#131419",
+      "#0e0f14",
+      "#08080b",
     ],
     custom: [
       "#edf0fd",
@@ -163,48 +164,51 @@ function App() {
         theme={theme}
         cssVariablesResolver={cssVariablesResolver}
       >
-        <Box
-          pos="fixed"
-          top={0}
-          left={0}
-          right={0}
-          h={marginY + headerHeight}
-          bg="var(--mantine-color-body)"
-          style={{ zIndex: 999 }}
-          visibleFrom="md"
-        />
-        <Header
-          activeSection={activeSection}
-          onSectionClick={scrollToSection}
-          pos="fixed"
-          top={marginY}
-          left={0}
-          right={0}
-          h={headerHeight}
-          mx="auto"
-          maw={maxWidth}
-          style={{ zIndex: 1000 }}
-          visibleFrom="md"
-        />
-        <Stack
-          align="left"
-          justify="center"
-          gap="xl"
-          maw={maxWidth}
-          w="100%"
-          mt={isTabletOrBelow ? marginY : headerHeight + 2 * marginY}
-          mx="auto"
-          px={isTabletOrBelow ? "xl" : 0}
-        >
-          <Banner />
-          {SECTIONS_DATA.map(({ id, Component }) => (
-            <div key={id} id={id} ref={sectionRefs[id]}>
-              <Component />
-            </div>
-          ))}
-        </Stack>
-        <Contact />
-        <Footer />
+        <AnimatedBackground />
+        <Box pos="relative" style={{ zIndex: 1 }}>
+          <Box
+            pos="fixed"
+            top={0}
+            left={0}
+            right={0}
+            h={marginY + headerHeight}
+            bg="var(--mantine-color-body)"
+            style={{ zIndex: 999 }}
+            visibleFrom="md"
+          />
+          <Header
+            activeSection={activeSection}
+            onSectionClick={scrollToSection}
+            pos="fixed"
+            top={marginY}
+            left={0}
+            right={0}
+            h={headerHeight}
+            mx="auto"
+            maw={maxWidth}
+            style={{ zIndex: 1000 }}
+            visibleFrom="md"
+          />
+          <Stack
+            align="left"
+            justify="center"
+            gap="xl"
+            maw={maxWidth}
+            w="100%"
+            mt={isTabletOrBelow ? marginY : headerHeight + 2 * marginY}
+            mx="auto"
+            px={isTabletOrBelow ? "xl" : 0}
+          >
+            <Banner />
+            {SECTIONS_DATA.map(({ id, Component }) => (
+              <div key={id} id={id} ref={sectionRefs[id]}>
+                <Component />
+              </div>
+            ))}
+          </Stack>
+          <Contact />
+          <Footer />
+        </Box>
       </MantineProvider>
     </>
   );
