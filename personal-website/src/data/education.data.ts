@@ -4,6 +4,7 @@ export const MSC_PROPS = {
   program: "Master of Science in Engineering, Information Technology",
   date: "Aug 2021 – Jun 2026",
   comment: "Specialization: AI and Machine Learning",
+  gpa: "5.0/5.0",
 };
 
 export const EXCHANGE_PROPS = {
@@ -83,5 +84,3 @@ export const MSC_SEMESTER_DATA = [
   ],
   [{ code: "TQXX33", name: "Degree project - Master's Thesis" }],
 ];
-
-export const GPA = "5.0/5.0";

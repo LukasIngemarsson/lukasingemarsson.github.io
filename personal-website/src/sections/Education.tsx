@@ -3,26 +3,22 @@ import {
   Table,
   Text,
   Button,
-  Group,
-  Paper,
   Anchor,
 } from "@mantine/core";
 import EducationAccordionItem from "../components/EducationAccordionItem";
 import Section from "../components/Section";
 
-import { useRef, useState } from "react";
+import { useState, useRef } from "react";
 
 import {
   MSC_PROPS,
   MSC_SEMESTER_TITLES,
   MSC_SEMESTER_DATA,
   EXCHANGE_PROPS,
-  GPA,
 } from "../data/education.data";
 
 function Education() {
   const [mscOpenedItems, setMscOpenedItems] = useState<string[]>([]);
-  const [showGpa, setShowGpa] = useState(false);
   const [openedParentAccordion, setOpenedParentAccordion] = useState<
     string | null
   >(null);
@@ -100,32 +96,22 @@ function Education() {
         value={openedParentAccordion}
         onChange={setOpenedParentAccordion}
       >
-        <EducationAccordionItem {...MSC_PROPS}>
-          <Group justify="space-between" pb="10px">
-            <Paper
-              withBorder
-              p="xs"
-              display="inline-block"
-              w="90px"
-              style={{
-                cursor: "default",
-                textAlign: "center",
-              }}
-              onClick={(event) => event.stopPropagation()}
-              onMouseEnter={() => setShowGpa(true)}
-              onMouseLeave={() => setShowGpa(false)}
-            >
-              {showGpa ? GPA : "GPA"}
-            </Paper>
-            <Button
-              onClick={(event) => {
-                event.stopPropagation();
-                setMscOpenedItems(allMscItemsOpened ? [] : allMscItemValues);
-              }}
-            >
-              {allMscItemsOpened ? "Collapse All" : "Expand All"}
-            </Button>
-          </Group>
+        <EducationAccordionItem
+          {...MSC_PROPS}
+          headerRight={
+            openedParentAccordion === "msc" ? (
+              <Button
+                size="xs"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setMscOpenedItems(allMscItemsOpened ? [] : allMscItemValues);
+                }}
+              >
+                {allMscItemsOpened ? "Collapse All" : "Expand All"}
+              </Button>
+            ) : undefined
+          }
+        >
           <Accordion
             multiple
             value={mscOpenedItems}

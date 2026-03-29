@@ -8,6 +8,8 @@ type Props = AccordionItemProps & {
   date: string;
   children: ReactNode;
   comment?: string;
+  gpa?: string;
+  headerRight?: ReactNode;
 };
 
 function EducationAccordionItem({
@@ -16,12 +18,14 @@ function EducationAccordionItem({
   date,
   children,
   comment,
+  gpa,
+  headerRight,
   ...accordionItemProps
 }: Props) {
   return (
     <Accordion.Item {...accordionItemProps}>
       <Accordion.Control>
-        <Group justify="space-between" pr="lg">
+        <Group justify="space-between" align="center" pr="lg" wrap="nowrap">
           <Stack gap="xs">
             <Stack gap={0}>
               <Title order={3}>{university}</Title>
@@ -30,8 +34,15 @@ function EducationAccordionItem({
                 {date}
               </Text>
             </Stack>
-            {comment && <Text>{comment}</Text>}
+            {(comment || gpa) && (
+              <Text>
+                {gpa && <Text span fw={700}>GPA: {gpa}</Text>}
+                {comment && gpa && " | "}
+                {comment}
+              </Text>
+            )}
           </Stack>
+          {headerRight}
         </Group>
       </Accordion.Control>
       <Accordion.Panel>{children}</Accordion.Panel>
