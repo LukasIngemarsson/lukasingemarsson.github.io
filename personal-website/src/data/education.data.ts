@@ -14,6 +14,23 @@ export const EXCHANGE_PROPS = {
   date: "Aug 2024 – Jan 2025",
 };
 
+export const MSC_KEY_COURSES = [
+  "Natural Language Processing",
+  "Algorithmic Problem Solving",
+  "Artificial Intelligence",
+  "Advanced Project Course - AI and Machine Learning",
+  "Ethical Hacking",
+  "Advanced Web Programming",
+  "Linear Algebra",
+  "Calculus in One and Several Variables",
+];
+
+export const EXCHANGE_KEY_COURSES = [
+  "Deep Learning for Computer Vision",
+  "Foundation of Big Data Analytics",
+  "Programming for AI",
+];
+
 export const MSC_SEMESTER_TITLES: { [key: number]: string } = {
   6: "B.Sc. Thesis",
   7: "Exchange @ KAIST, South Korea",

@@ -1,93 +1,20 @@
-import {
-  Accordion,
-  Table,
-  Text,
-  Button,
-  Anchor,
-} from "@mantine/core";
+import { Accordion, Text } from "@mantine/core";
 import EducationAccordionItem from "../components/EducationAccordionItem";
 import Section from "../components/Section";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import {
   MSC_PROPS,
-  MSC_SEMESTER_TITLES,
-  MSC_SEMESTER_DATA,
   EXCHANGE_PROPS,
+  MSC_KEY_COURSES,
+  EXCHANGE_KEY_COURSES,
 } from "../data/education.data";
 
 function Education() {
-  const [mscOpenedItems, setMscOpenedItems] = useState<string[]>([]);
   const [openedParentAccordion, setOpenedParentAccordion] = useState<
     string | null
   >(null);
-  const exchangeCoursesRef = useRef<HTMLDivElement>(null);
-
-  const allMscItemValues = MSC_SEMESTER_DATA.map((_, index) =>
-    String(index + 1),
-  );
-  const allMscItemsOpened = mscOpenedItems.length === allMscItemValues.length;
-
-  const handleExchangeClick = () => {
-    if (openedParentAccordion !== "msc") return;
-    setMscOpenedItems([]);
-    setOpenedParentAccordion("exchange");
-    setTimeout(() => {
-      document.getElementById("exchange-item")?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }, 300);
-  };
-
-  const redirectToExchangeCourses = () => {
-    setMscOpenedItems(["7"]);
-    setOpenedParentAccordion("msc");
-    setTimeout(() => {
-      exchangeCoursesRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }, 300);
-  };
-
-  const mscSemesterItems = MSC_SEMESTER_DATA.map((semester, index) => {
-    const semesterNum = index + 1;
-    const item = (
-      <Accordion.Item
-        key={semesterNum}
-        value={String(semesterNum)}
-        ref={semesterNum === 7 ? exchangeCoursesRef : undefined}
-      >
-        <Accordion.Control>
-          {`Semester ${semesterNum}`}
-          {MSC_SEMESTER_TITLES[semesterNum] && (
-            <Text span>
-              {": "}
-              <Text c="dimmed" span>
-                {MSC_SEMESTER_TITLES[semesterNum]}
-              </Text>
-            </Text>
-          )}
-        </Accordion.Control>
-        <Accordion.Panel>
-          <Table>
-            <Table.Tbody>
-              {semester.map((course) => (
-                <Table.Tr key={course.code}>
-                  <Table.Td w={100}>{course.code}</Table.Td>
-                  <Table.Td>{course.name}</Table.Td>
-                </Table.Tr>
-              ))}
-            </Table.Tbody>
-          </Table>
-        </Accordion.Panel>
-      </Accordion.Item>
-    );
-
-    return item;
-  });
 
   return (
     <Section title="Education">
@@ -96,36 +23,17 @@ function Education() {
         value={openedParentAccordion}
         onChange={setOpenedParentAccordion}
       >
-        <EducationAccordionItem
-          {...MSC_PROPS}
-          headerRight={
-            openedParentAccordion === "msc" ? (
-              <Button
-                size="xs"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setMscOpenedItems(allMscItemsOpened ? [] : allMscItemValues);
-                }}
-              >
-                {allMscItemsOpened ? "Collapse All" : "Expand All"}
-              </Button>
-            ) : undefined
-          }
-        >
-          <Accordion
-            multiple
-            value={mscOpenedItems}
-            onChange={setMscOpenedItems}
-          >
-            {mscSemesterItems}
-          </Accordion>
+        <EducationAccordionItem {...MSC_PROPS}>
+          <Text size="sm">
+            <Text span fw={600}>Key Courses: </Text>
+            {MSC_KEY_COURSES.join(", ")}
+          </Text>
         </EducationAccordionItem>
-        <EducationAccordionItem
-          id="exchange-item"
-          onClick={handleExchangeClick}
-          {...EXCHANGE_PROPS}
-        >
-          <Anchor onClick={redirectToExchangeCourses}>See courses</Anchor>
+        <EducationAccordionItem {...EXCHANGE_PROPS}>
+          <Text size="sm">
+            <Text span fw={600}>Key Courses: </Text>
+            {EXCHANGE_KEY_COURSES.join(", ")}
+          </Text>
         </EducationAccordionItem>
       </Accordion>
     </Section>
