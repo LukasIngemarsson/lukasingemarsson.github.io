@@ -57,7 +57,7 @@ export const EXPERIENCE_DATA = [
     organisationUrl: "https://traton.com",
     date: "Jun 2025 – Aug 2025",
     description:
-      `Developed an end-to-end generative pipeline using LLMs to synthesize
+      `Developed an end-to-end generative LLM pipeline to synthesize
       multi-vehicle crash simulations from sparse image-text input data. Owned the 
       full project lifecycle: setting up a systematic plan, iteratively developing
       the pipeline, and finally packaging the tool for future use in the organization.`,
