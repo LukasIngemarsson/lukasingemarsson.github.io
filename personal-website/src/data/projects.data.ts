@@ -20,12 +20,6 @@ export const PROJECTS_DATA = [
     repoNames: ["chess-move-explorer"],
   },
   {
-    title: "WhoSays",
-    description:
-      "A real-time pipeline for multi-speaker diarization and transcription that answers three practical questions: who spoke, when, and what did they say?",
-    repoNames: ["who-says"],
-  },
-  {
     title: "Venom",
     description:
       "A lightweight data-collection framework for identifying and quantifying illicit \
@@ -33,11 +27,10 @@ export const PROJECTS_DATA = [
     repoNames: ["venom"],
   },
   {
-    title: "CLIP PubMedVision",
+    title: "WhoSays",
     description:
-      "A project where the objective was to investigate the potential of (medical) image-text \
-      data when fine-tuning OpenAI's CLIP model for image classification, in absence of labeled data.",
-    repoNames: ["clip-pubmedvision"],
+      "A real-time pipeline for multi-speaker diarization and transcription that answers three practical questions: who spoke, when, and what did they say?",
+    repoNames: ["who-says"],
   },
   {
     title: "Musicle",
