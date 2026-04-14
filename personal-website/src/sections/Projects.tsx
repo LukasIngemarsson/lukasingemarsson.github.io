@@ -14,6 +14,11 @@ function Projects() {
     `(max-width: ${theme.breakpoints.md})`,
   );
 
+  const slides =
+    PROJECTS_DATA.length % 2 === 0
+      ? PROJECTS_DATA
+      : [...PROJECTS_DATA, ...PROJECTS_DATA];
+
   return (
     <Section title="Projects">
       <Paper withBorder p={0} style={{ overflow: "hidden" }}>
@@ -28,9 +33,9 @@ function Projects() {
           withIndicators={isSmallMobile || isMobileOrTablet}
           emblaOptions={{ loop: true }}
         >
-          {PROJECTS_DATA.map((slide, idx) => (
+          {slides.map((slide, idx) => (
             <ProjectCarouselSlide
-              key={slide.title}
+              key={`${slide.title}-${idx}`}
               {...slide}
               isEven={idx % 2 === 0}
             />

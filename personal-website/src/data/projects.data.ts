@@ -1,23 +1,17 @@
 export const PROJECTS_DATA = [
   {
+    title: "Harness",
+    description:
+      "An agentic AI framework built from scratch to learn how tool-using agents work under the hood.",
+    repoNames: ["harness"],
+  },
+  {
     title: "Algorithmic Problem Solving",
     description:
       "My solutions to around 300 algorithmic coding problems on Kattis \
       and UVa Online Judge, as well as a library containing my implementations of competitive \
       programming algorithms.",
     repoNames: ["kattis", "uva-online-judge", "algo-lib"],
-  },
-  {
-    title: "Hubdle",
-    description:
-      "Compete with friends at daily games. Track scores, climb leaderboards, settle who's really the best.",
-    repoNames: ["hubdle"],
-  },
-  {
-    title: "Chess Move Explorer",
-    description:
-      "Explore your opening tendencies by position across your game history. Fetch your games from Lichess or Chess.com, then navigate the board to see which moves you and your opponents have played from any position.",
-    repoNames: ["chess-move-explorer"],
   },
   {
     title: "Venom",
@@ -31,6 +25,18 @@ export const PROJECTS_DATA = [
     description:
       "A real-time pipeline for multi-speaker diarization and transcription that answers three practical questions: who spoke, when, and what did they say?",
     repoNames: ["who-says"],
+  },
+  {
+    title: "Hubdle",
+    description:
+      "Compete with friends at daily games. Track scores, climb leaderboards, settle who's really the best.",
+    repoNames: ["hubdle"],
+  },
+  {
+    title: "Chess Move Explorer",
+    description:
+      "Explore your opening tendencies by position across your game history. Fetch your games from Lichess or Chess.com, then navigate the board to see which moves you and your opponents have played from any position.",
+    repoNames: ["chess-move-explorer"],
   },
   {
     title: "Musicle",
